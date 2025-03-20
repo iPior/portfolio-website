@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto, Roboto_Mono, Josefin_Sans } from "next/font/google";
 import "./globals.css";
+ 
+const roboto = Roboto({
+  // variable: "--font-roboto",
+  subsets: ['latin'],
+  weight: ['400']
+})
+
+const josefin = Josefin_Sans({
+  subsets: ['latin'],
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +33,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${josefin.className} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>

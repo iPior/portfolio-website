@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -41,9 +42,7 @@ export function Header() {
           <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contact
           </Link>
-          <Button asChild>
-            <Link href="#contact">Hire Me</Link>
-          </Button>
+        <ThemeToggle/>
         </nav>
 
         {/* Mobile navigation */}
@@ -81,6 +80,7 @@ export function Header() {
               <Button asChild className="w-full" onClick={() => setIsMenuOpen(false)}>
                 <Link href="#contact">Hire Me</Link>
               </Button>
+              
             </nav>
           </div>
         )}
