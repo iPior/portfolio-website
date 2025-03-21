@@ -1,7 +1,5 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import PatternWrapper from "@/components/PatternWrapper"
 
@@ -20,8 +18,8 @@ export function Hero() {
             />
         </div>
         <div className="w-2/3 flex flex-col items-center justify-center text-center">
-          <h1 className="text-4xl md:text-7xl font-bold tracking-tighter mb-6">
-            Hi, I'm <span className="text-accent underline underline-offset-8">Piotr Szaran</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Hi, I'm <span className="text-accent underline underline-offset-8 text-7xl">Piotr Szaran</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mb-8">
             I'm a <span className="text-accent-muted">full-stack</span> developer based in <span className="text-accent-muted">Mississauga, Ontario</span>.

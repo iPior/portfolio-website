@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto, Roboto_Mono, Josefin_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Roboto, Roboto_Mono, Josefin_Sans, Krona_One, Rubik, Playfair_Display } from "next/font/google";
 import "./globals.css";
  
-const roboto = Roboto({
-  // variable: "--font-roboto",
-  subsets: ['latin'],
-  weight: ['400']
-})
+
 
 const josefin = Josefin_Sans({
   subsets: ['latin'],
@@ -36,7 +32,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={`${josefin.className} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
