@@ -44,14 +44,14 @@ export function Projects() {
       <section id="projects" className="">
       <div className="container">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-1">
           {projects.map((project, id) => (
             <ProjectCard 
               key={id}
               title={project.title}
               description={project.description}
               image={project.image}
-              tags={project.taqs}
+              tags={project.tags}
               liveUrl={project.liveUrl}
               githubUrl={project.githubUrl}
             />

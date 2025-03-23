@@ -25,11 +25,11 @@ export default function Home() {
         <div className="z-10">
 
           <Hero />
-          <About />
-          <Skills />
-          <Projects />
+          {/* <About /> */}
+          {/* <Skills /> */}
+          {/* <Projects /> */}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </ThemeProvider>
     </main>
   )

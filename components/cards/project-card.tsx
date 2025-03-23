@@ -6,7 +6,7 @@ import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface ProjectCardProps {
-  key: number;
+//   key: number;
   image: string;
   title: string;
   description: string;
@@ -15,23 +15,24 @@ interface ProjectCardProps {
   githubUrl: string;
 }
 
-export default function SkillCard({ id, image, title, description, tags, liveUrl, githubUrl  }:ProjectCardProps){
+export default function SkillCard({ image, title, description, tags, liveUrl, githubUrl  }:ProjectCardProps){
 
 
   return (
     // <div className="flex flex-col rounded p-2 bg-foreground text-background items-center justify-between">
-        <Card  className="overflow-hidden group">
+        <Card  className="bg-background">
             <div className="relative h-48 overflow-hidden">
             <Image
-                src={image}
+                src={"https://placehold.co/400x600"}
                 alt={title}
                 fill
                 className="object-cover transition-transform group-hover:scale-105"
             />
             </div>
+
             <CardContent className="p-6">
             <h3 className="text-xl font-bold mb-2">{title}</h3>
-            <p className="text-muted-foreground mb-4">{description}</p>
+            <p className="mb-4">{description}</p>
 
             <div className="flex flex-wrap gap-2 mb-4">
                 {tags?.map((tag) => (
