@@ -1,5 +1,6 @@
-import PatternWrapper from "@/components/PatternWrapper"
+import PatternWrapper from "@/components/pattern-wrapper"
 import ProjectCard from "@/components/cards/project-card"
+import BorderWrapper from "../border-wrapper"
 
 export function Projects() {
   const projects = [
@@ -30,45 +31,37 @@ export function Projects() {
   ]
 
   return (
-    <>
-      <PatternWrapper>
-        <div className="mt-24"></div>
-      </PatternWrapper>
-      <PatternWrapper>
+    <section id="projects" className="">
+      <BorderWrapper className="mt-24">
         <h1 className="text-6xl font-bold">Projects</h1>
-      </PatternWrapper>
-      <PatternWrapper>
-          <div className="mt-4"></div>
-      </PatternWrapper>
-      <PatternWrapper>
-      <section id="projects" className="">
-      <div className="container">
+      </BorderWrapper>
+      <BorderWrapper className="mt-4">
+        <div className="container">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-1">
-          {projects.map((project, id) => (
-            <ProjectCard 
-              key={id}
-              title={project.title}
-              description={project.description}
-              image={project.image}
-              tags={project.tags}
-              liveUrl={project.liveUrl}
-              githubUrl={project.githubUrl}
-            />
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-1">
+            {projects.map((project, id) => (
+              <ProjectCard 
+                key={id}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                tags={project.tags}
+                liveUrl={project.liveUrl}
+                githubUrl={project.githubUrl}
+              />
+            ))}
+          </div>
+
+          {/* <div className="text-center mt-12">
+            <Button asChild>
+              <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4 mr-2" />
+                See More on GitHub
+              </Link>
+            </Button>
+          </div> */}
         </div>
-
-        {/* <div className="text-center mt-12">
-          <Button asChild>
-            <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-              <Github className="h-4 w-4 mr-2" />
-              See More on GitHub
-            </Link>
-          </Button>
-        </div> */}
-      </div>
+      </BorderWrapper>
     </section>
-      </PatternWrapper>
-    </>
   )
 }

@@ -7,10 +7,11 @@ import { Skills } from "@/components/content/skills"
 import { Projects } from "@/components/content/projects"
 import { About } from "@/components/content/about"
 // import { TracingBeam } from "@/components/ui/tracing-beam";
+import PatternWrapper from "@/components/pattern-wrapper"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-100/5 to-background">
+    <main className="min-h-screen bg-gradient-to-b from-gray-100/5 to-background overflow-hidden">
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
@@ -18,17 +19,14 @@ export default function Home() {
         disableTransitionOnChange
       >
         <Header />
-        <div
-          className="bg-blue-100 w-20 absolute h-screen z-[-10]"
-        >
-        </div>
-        <div className="z-10">
-
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-        </div>
+        <PatternWrapper>
+          {/* <div className="z-10 container mx-auto"> */}
+            <Hero />
+            <About />
+            <Skills />
+            <Projects />
+          {/* </div> */}
+        </PatternWrapper>
         <Footer />
       </ThemeProvider>
     </main>

@@ -8,9 +8,14 @@ interface BorderWrapperProps {
 
 export default function BorderWrapper({ children, className }: BorderWrapperProps) {
   return (
-
-    <div className={cn("border-b border-t w-screen mx-auto", className)}> 
+      <div className={cn("relative", 
+      "before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-foreground/10 before:-left-[100vw]", 
+      "after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-foreground/10 after:-left-[100vw]",
+      className)}
+      >
         {children}
-    </div>
+      </div>
   );
 } 
+
+// <div className="relative before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-gray-950/5 dark:before:bg-white/10 before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-gray-950/5 dark:after:bg-white/10 after:-left-[100vw]">

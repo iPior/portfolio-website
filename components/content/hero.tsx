@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
-import PatternWrapper from "@/components/PatternWrapper"
+import PatternWrapper from "@/components/pattern-wrapper"
 import BorderWrapper from "@/components/border-wrapper"
 
 export function Hero() {
@@ -53,29 +53,18 @@ export function Hero() {
     //   </section>
     // </PatternWrapper>
 
-      // <section id="hero" className="relative p-20 md:py-32 flex">
-      <>
-        {/* <PatternWrapper> */}
-        {/* </PatternWrapper> */}
-        {/* <PatternWrapper> */}
-        {/* </PatternWrapper> */}
-        {/* <PatternWrapper> */}
-        {/* </PatternWrapper> */}
-        
-        {/* <PatternWrapper className="pt-20  "> */}
-          <section className="container mx-auto border my-2">
-          <h1 className="text-xl text-muted-foreground w-full font-bold mt-24 indent-1">Hi, I'm</h1>
-          <BorderWrapper>
-            <h1 className=" tracking-tight font-bold text-9xl indent-[-8]">Piotr Szaran</h1>
-          </BorderWrapper>
-          <BorderWrapper className="mt-4">
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl indent-1">
-              I'm a <span className="underline hover:text-accent animate-pulse">full-stack</span> developer based in <span className="underline hover:text-accent animate-pulse">Mississauga</span>, Ontario.
-            </p>
-          </BorderWrapper>
-          </section>
-        {/* </PatternWrapper> */}
-        </>
+      // <section id="hero" className="relative p-20 md:py-32 flex">     
+      <section className="mx-auto w-full my-2">
+        <h1 className="text-xl text-muted-foreground w-full font-bold mt-24 indent-1">Hi, I'm</h1>
+        <BorderWrapper>
+          <h1 className=" tracking-tight font-bold text-9xl indent-[-8]">Piotr Szaran</h1>
+        </BorderWrapper>
+        <BorderWrapper className="mt-4">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl indent-1">
+            I'm a <span className="underline hover:text-accent animate-pulse">full-stack</span> developer based in <span className="underline hover:text-accent animate-pulse">Mississauga</span>, Ontario.
+          </p>
+        </BorderWrapper>
+      </section>
   )
 }
 
