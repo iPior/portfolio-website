@@ -11,7 +11,7 @@ import PatternWrapper from "@/components/pattern-wrapper"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-100/5 to-background overflow-hidden">
+    <main className="min-h-screen bg-gradient-to-t dark:bg-gradient-to-b from-blue-50 dark:from-gray-100/5 to-background overflow-hidden">
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
@@ -20,12 +20,10 @@ export default function Home() {
       >
         <Header />
         <PatternWrapper>
-          {/* <div className="z-10 container mx-auto"> */}
             <Hero />
             <About />
             <Skills />
             <Projects />
-          {/* </div> */}
         </PatternWrapper>
         <Footer />
       </ThemeProvider>

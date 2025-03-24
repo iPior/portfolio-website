@@ -31,13 +31,13 @@ export function Header() {
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
-            About
-          </Link>
-          <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
-            Projects
+            About Me
           </Link>
           <Link href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
             Skills
+          </Link>
+          <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
+            Projects
           </Link>
           <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contact

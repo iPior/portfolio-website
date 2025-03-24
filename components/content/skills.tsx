@@ -56,9 +56,12 @@ export function Skills() {
               <SkillCard key={index} icon={icon.icon} iconName={icon.iconName} />
             ))
           }
+        </div>
+      </BorderWrapper>
+    </section>
+)
+}
         
-      
-
         {/* <Image 
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" 
             alt="HTML5"
@@ -107,10 +110,3 @@ export function Skills() {
           height={120}
           width={120}
         /> */}    
-        
-        </div>
-      </BorderWrapper>
-    </section>
-)
-}
-
