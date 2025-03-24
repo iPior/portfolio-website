@@ -20,7 +20,7 @@ export default function SkillCard({ image, title, description, tags, liveUrl, gi
 
   return (
     // <div className="flex flex-col rounded p-2 bg-foreground text-background items-center justify-between">
-        <Card  className="bg-card">
+        <Card  className="bg-background">
             <div className="relative h-48 overflow-hidden">
             <Image
                 src={"https://placehold.co/400x600"}

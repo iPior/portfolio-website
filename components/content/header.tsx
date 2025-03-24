@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 
@@ -30,19 +30,36 @@ export function Header() {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="#about" className="text-sm font-medium hover:text-accent transition-colors">
             About Me
           </Link>
-          <Link href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="#skills" className="text-sm font-medium hover:text-accent transition-colors">
             Skills
           </Link>
-          <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="#projects" className="text-sm font-medium hover:text-accent transition-colors">
             Projects
           </Link>
-          <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+          {/* <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contact
-          </Link>
-        <ThemeToggle/>
+          </Link> */}
+          <div className="flex items-center gap-3">
+            <Button variant="ghost" size="icon" asChild className="h-9 w-9">
+              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Github className="h-5 w-5" />
+              </a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild className="h-9 w-9">
+              <a
+                href="https://linkedin.com/in/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </Button>
+            <ThemeToggle/>
+          </div>
         </nav>
 
         {/* Mobile navigation */}

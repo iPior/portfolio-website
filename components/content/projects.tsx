@@ -1,4 +1,3 @@
-import PatternWrapper from "@/components/pattern-wrapper"
 import ProjectCard from "@/components/cards/project-card"
 import BorderWrapper from "../border-wrapper"
 
@@ -36,9 +35,9 @@ export function Projects() {
         <h1 className="text-6xl font-bold">Projects</h1>
       </BorderWrapper>
       <BorderWrapper className="mt-4">
-        <div className="container">
+        <div className="container bg-white/15">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 py-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2">
             {projects.map((project, id) => (
               <ProjectCard 
                 key={id}

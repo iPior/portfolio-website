@@ -6,27 +6,27 @@ export function Skills() {
 
   const iconsArray = [
     {
-      icon: "devicon-html5-plain",
+      icon: "devicon-html5-plain colored",
       iconName: "HTML5",
     },
     {
-      icon: "devicon-css3-plain",
+      icon: "devicon-css3-plain colored",
       iconName: "CSS3",
     },
     {
-      icon: "devicon-javascript-plain",
+      icon: "devicon-javascript-plain colored",
       iconName: "JavaScript",
     },
     {
-      icon: "devicon-typescript-plain",
+      icon: "devicon-typescript-plain colored",
       iconName: "TypeScript",
     },
     {
-      icon: "devicon-tailwindcss-original",
+      icon: "devicon-tailwindcss-original colored",
       iconName: "Tailwind CSS",
     },
     {
-      icon: "devicon-python-plain",
+      icon: "devicon-python-plain colored",
       iconName: "Python",
     },
     {
@@ -38,7 +38,7 @@ export function Skills() {
       iconName: "GitHub",
     },
     {
-      icon: "devicon-nodejs-plain",
+      icon: "devicon-nodejs-plain colored ",
       iconName: "Node.js",
     },
   ];
@@ -50,7 +50,7 @@ export function Skills() {
         <h1 className="text-6xl font-bold">Skills</h1>
       </BorderWrapper>
       <BorderWrapper className="mt-4">
-        <div className="container flex justify-between py-1 text-9xl">
+        <div className="container flex justify-between p-2 text-9xl dark:bg-white/15">
           {
             iconsArray.map((icon, index) => (
               <SkillCard key={index} icon={icon.icon} iconName={icon.iconName} />
