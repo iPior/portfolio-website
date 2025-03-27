@@ -44,13 +44,13 @@ export function Header() {
           </Link> */}
           <div className="flex items-center gap-3">
             <Button variant="ghost" size="icon" asChild className="h-9 w-9">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/ipior" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild className="h-9 w-9">
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/piotrszaran/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

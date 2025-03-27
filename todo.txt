@@ -1,6 +1,4 @@
-Fix header, ie section toggle
 Do footer
 Add music section
-Add projects
-Fix light mode colors
+Add projects pictures
 About me paragraph
