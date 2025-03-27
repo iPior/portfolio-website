@@ -57,10 +57,10 @@ export function Skills() {
         <h1 className="text-6xl font-bold">Skills</h1>
       </BorderWrapper>
       <BorderWrapper className="mt-4">
-        <div className="container flex justify-between p-2 text-9xl bg-foreground/5">
+        <div className="container flex p-2 text-9xl bg-foreground/5 gap-2">
           {
             iconsArray.map((icon, index) => (
-              <SkillCard key={index} icon={icon.icon} iconName={icon.iconName} />
+              <SkillCard key={index} icon={icon.icon} iconName={icon.iconName} svg={icon.svg}/>
             ))
           }
         </div>
@@ -68,10 +68,3 @@ export function Skills() {
     </section>
 )
 }
-        
-{/* <Image 
-    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" 
-    alt="HTML5"
-    height={120}
-    width={120}
-  /> */}    

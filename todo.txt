@@ -1,4 +1,2 @@
-Do footer
 Add music section
-Add projects pictures
 About me paragraph

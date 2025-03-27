@@ -146,7 +146,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
+          
         {/* Bottom section with copyright and back to top */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-12 pt-6 border-t border-border/40">
           <div className="text-xs text-muted-foreground mb-4 md:mb-0">
@@ -162,6 +162,7 @@ export function Footer() {
             <ArrowUp className="h-4 w-4 mr-1" />
             Back to top
           </Button>
+        </div>
         </div>
       </div>
     </footer>
