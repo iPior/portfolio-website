@@ -5,7 +5,6 @@ import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface ProjectCardProps {
-//   key: number;
   image: string;
   title: string;
   description: string;
@@ -17,13 +16,12 @@ interface ProjectCardProps {
 export default function SkillCard({ image, title, description, tags, liveUrl, githubUrl  }:ProjectCardProps){
   return (
     <Card className="bg-background h-150 pt-0">
-        {/* <div className="overflow-hidden"> */}
         <Image
             src={image}
             alt={title}
             width={600}
             height={400}
-            className="h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-lg"
+            className="h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-2xl px-1 pt-1"
         />
 
         <CardContent className="h-1/2 px-4 flex flex-col justify-between">
