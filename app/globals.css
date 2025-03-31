@@ -38,7 +38,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --text-hero: 10rem;
+  --text-hero: 15rem;
+  --text-hero--line-height: 0.25rem; 
+  --text-hero--letter-spacing: 0.25rem; 
 }
 
 :root {
@@ -114,9 +116,9 @@
 }
 
 @font-face {
-  font-family: 'QuickPeachy';
+  font-family: 'ProximoNova';
   font-style: normal;
-  src: url('/fonts/QuickPeachy.ttf') format('truetype');
+  src: url('/fonts/proximo-nova.otf') format('truetype');
 }
 
 @font-face {

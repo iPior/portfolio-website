@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto, Roboto_Mono, Josefin_Sans, Krona_One, Rubik, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Roboto, Roboto_Mono, Josefin_Sans, Krona_One, Rubik, Playfair_Display, Gravitas_One } from "next/font/google";
 import "./globals.css";
- 
-
-
-const josefin = Josefin_Sans({
-  subsets: ['latin'],
-})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
