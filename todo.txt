@@ -1,6 +1,3 @@
-About me paragraph
-responsive design
-
 Style ideas
-- load/fade on scroll
-- contact me button takes you to email
+- load/fade on scroll? 
+- responsive design

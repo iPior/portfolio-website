@@ -8,7 +8,6 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    // <footer className="border-t"> 
       <footer className="container mx-auto px-8 md:pt-12 md:pb-24 border-l border-r">
         <div className="w-full flex flex-col md:flex-row items-center justify-between">
           {/* left section with contacat */}

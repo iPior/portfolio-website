@@ -8,7 +8,6 @@ export function FooterBasic() {
 
   return (
     <footer className="container mx-auto px-8 md:pt-12 md:pb-12 border-l border-r space-y-8">
-
         <div className="border-border/60 flex flex-col md:flex-row items-center">
           <div className="text-xs text-muted-foreground text-start w-1/3">
             Made with <span className="text-red-400">♥</span> using Next.js, React, and Tailwind CSS

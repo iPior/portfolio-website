@@ -3,46 +3,66 @@ import BorderWrapper from "../border-wrapper"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Coffee, Code, Laptop, GraduationCap, Heart, BookOpen, Clock, Speaker, Disc, Trees } from "lucide-react"
+import { Coffee, Code, Laptop, GraduationCap, Heart, BookOpen, Clock, Speaker, Disc3, Trees, Gamepad2, Dumbbell, BookA, Palette } from "lucide-react"
 
 export function About() {
-  // Quick facts about you
-  const quickFacts = [
+
+  const badgeFacts = [
     { icon: <Code className="h-4 w-4" />, label: "Full-Stack Developer" },
     { icon: <Clock className="h-4 w-4" />, label: "1 Year of Experience" },
-    { icon: <Disc className="h-4 w-4" />, label: "Drum and Bass Enthusiast" },
-    { icon: <Speaker className="h-4 w-4" />, label: "DJ" },
-    { icon: <Trees className="h-4 w-4" />, label: "Nature Lover" },
+    { icon: <Palette className="h-4 w-4" />, label: "Creatively Minded" },
   ]
 
-  // What you do
-  const whatIDo = [
-    "Build responsive web applications",
-    "Create intuitive user interfaces",
-    "Develop scalable backend systems",
-    "Optimize for performance and SEO",
+  const interests = [
+    "WebSocket requests",
+    "Optiziming web application performance", 
+    "Intermediate Next.js and TypeScript concepts",
+    "MongoDB and Prisma",
+    "React Native and Electron",
   ]
 
-  // Things you love
   const passions = [
-    "Open Source",
     "Problem Solving",
     "UI/UX Design",
     "New Technologies",
-    "Teaching",
     "Continuous Learning",
+    "Music",
+    "Nature and Hikes",
+    "Gym",
+    "Gaming",
+    "Fashion",
+    "Travelling"
   ]
 
-  const hobbies = [
-    "Playing the guitar",
-    "Hiking",
-    "Photography",
-    "Cooking",
-    "Traveling",
-  ]
+  const funFacts = [
+    {
+      label: "I collect Ontario provincial park badges",
+      icon: <Trees className="ml-2"/>,
+    },
+    {
+      label: "I DJ and have produced a song before",
+      icon: <Speaker className="ml-2 "/>,
+    },
+    {
+      label: "I rank in the top 0.6% of Rocket League players",
+      icon: <Gamepad2 className="ml-2 "/>,
+    },
+    {
+      label: "My heaviest gym lift was a 365lbs back squat",
+      icon: <Dumbbell className="ml-2 "/>,
+    },
+    {
+      label: "Drum and bass is my favorite genre of music",
+      icon: <Disc3 className="ml-2 "/>,
+    },
+    {
+      label: "I fluently speak, read, and write in Polish",
+      icon: <BookA className="ml-2 "/>,
+    },
+  ];
 
   return (
-    <section id="about">
+    <section id="about" className="scroll-mt-16">
         <BorderWrapper className="mt-24">
           <h1 className="text-6xl font-bold px-4">About Me</h1>
         </BorderWrapper>
@@ -50,27 +70,28 @@ export function About() {
 
           {/* Profile Image Column */}
             <Card className="h-full">
-              <CardContent className="p-6 flex flex-col justify-between items-center text-center">
-                <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary mb-4">
+              <CardContent className="p-6 flex flex-col justify-between items-center text-center space-y-4">
+              <h3 className="text-3xl font-bold mb-4">Piotr Szaran</h3>
+
+                <div className="relative w-48 h-48 md:w-58 md:h-58 rounded-full overflow-hidden border-4 border-primary mb-4">
                   <Image src="/images/headshot.jpg" alt="Profile" fill className="object-cover" />
                 </div>
-
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold">Piotr Szaran</h3>
-                  <div className="flex flex-wrap justify-center gap-2">
-                    {quickFacts.map((fact, index) => (
-                      <Badge key={index} variant="outline" className="flex items-center gap-1 px-2 py-1">
-                        {fact.icon}
-                        <span>{fact.label}</span>
-                      </Badge>
-                    ))}
-                  </div>
-                  <Button asChild className="mt-2">
-                    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                      Contact Me
-                    </a>
-                  </Button>
+                  
+                <div className="flex flex-wrap justify-center gap-2">
+                  {badgeFacts.map((fact, index) => (
+                    <Badge key={index} variant="outline" className="flex items-center gap-1 px-2 py-1">
+                      {fact.icon}
+                      <span>{fact.label}</span>
+                    </Badge>
+                  ))}
                 </div>
+                
+                <Button asChild>
+                  <a href="mailto:szaranpiotr@gmail.com" target="_blank" rel="noopener noreferrer">
+                    Contact Me
+                  </a>
+                </Button>
+
             </CardContent>
           </Card>
           {/* </div> */}
@@ -107,8 +128,17 @@ export function About() {
               <div className="mt-6 pt-6 border-t">
                 <div className="flex items-center gap-2 mb-4">
                   <BookOpen className="h-5 w-5 text-primary" />
-                  <h3 className="text-lg font-bold">Currently Learning</h3>
+                  <h3 className="text-lg font-bold">Interested in Learning More About</h3>
                 </div>
+                <ul className="space-y-3 flex flex-col mt-2">
+                  {interests.map((item, index) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-primary mr-2">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                
               </div>
               
             </CardContent>
@@ -136,10 +166,10 @@ export function About() {
                 </div>
 
                 <ul className="space-y-3">
-                {whatIDo.map((item, index) => (
-                  <li key={index} className="flex items-start">
+                {funFacts.map((fact, index) => (
+                  <li key={index} className="flex">
                     <span className="text-primary mr-2">•</span>
-                    <span>{item}</span>
+                    <span className="flex items-center">{fact.label}{fact.icon}</span>
                   </li>
                 ))}
               </ul>

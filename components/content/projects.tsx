@@ -30,7 +30,7 @@ export function Projects() {
   ]
 
   return (
-    <section id="projects" className="scroll-mt-16 ">
+    <section id="projects" className="scroll-mt-16">
       <BorderWrapper className="mt-24 px-4">
         <h1 className="text-6xl font-bold">Projects</h1>
       </BorderWrapper>

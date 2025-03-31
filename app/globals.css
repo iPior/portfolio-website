@@ -8,15 +8,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --pattern-fg: var(--pattern-fg);
+  --color-badge: var(--badge); /* good */
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
+
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -38,9 +34,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --text-hero: 15rem;
-  --text-hero--line-height: 0.25rem; 
-  --text-hero--letter-spacing: 0.25rem; 
+  --text-hero: 11rem;
+  --text-hero--line-height: 1;
 }
 
 :root {
@@ -49,6 +44,7 @@
   --foreground: oklch(0.145 0 0); /* good */
   --card: oklch(1 0 0); /* good */
   --pattern-fg: var(--background); /* good */
+  --badge: oklch(0.955 0 0); /* good */
   /* --card: oklch(1 0 0); */
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -66,14 +62,6 @@
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
@@ -81,6 +69,7 @@
   --foreground: oklch(0.985 0 0); /* good */
   --card: oklch(0.215 0 0); /* good */
   --pattern-fg: var(--background); /* good */
+  --badge: oklch(0.305 0 0); /* good */
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
@@ -96,14 +85,6 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
 }
 
 @layer base {
@@ -125,4 +106,11 @@
   font-family: 'ArminGrotesk';
   font-style: normal;
   src: url('/fonts/Armin-Grotesk.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
 }
