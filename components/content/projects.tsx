@@ -31,13 +31,13 @@ export function Projects() {
 
   return (
     <section id="projects" className="scroll-mt-16 ">
-      <BorderWrapper className="mt-24">
+      <BorderWrapper className="mt-24 px-4">
         <h1 className="text-6xl font-bold">Projects</h1>
       </BorderWrapper>
       <BorderWrapper className="mt-4">
-        <div className="container bg-foreground/5 dark:bg-foreground/15">
+        <div className="container">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
             {projects.map((project, id) => (
               <ProjectCard 
                 key={id}

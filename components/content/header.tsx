@@ -14,13 +14,11 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 ">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-8">
       <div className="flex container border-l border-r h-16 items-center justify-between mx-auto px-8">
-        <div className="flex items-center gap-2">
           <Link href="/" className="font-bold text-xl">
             Piotr Szaran
           </Link>
-        </div>
 
         {/* Mobile menu button */}
         <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
@@ -43,12 +41,12 @@ export function Header() {
             Contact
           </Link> */}
           <div className="flex items-center gap-3">
-            <Button variant="ghost" size="icon" asChild className="h-9 w-9">
+            <Button variant="outline" size="icon" asChild className="h-9 w-9">
               <a href="https://github.com/ipior" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="h-9 w-9">
+            <Button variant="outline" size="icon" asChild className="h-9 w-9">
               <a
                 href="https://linkedin.com/in/piotrszaran/"
                 target="_blank"

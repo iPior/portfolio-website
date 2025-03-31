@@ -1,4 +1,2 @@
 About me paragraph
-favicon
-
-maybe add a left padding for the whole page
+responsive design

@@ -48,11 +48,11 @@ export function Skills() {
 
   return (
     <section id="skills" className="scroll-mt-16">
-      <BorderWrapper className="mt-24">
+      <BorderWrapper className="mt-24 px-4">
         <h1 className="text-6xl font-bold">Skills</h1>
       </BorderWrapper>
       <BorderWrapper className="mt-4">
-        <div className="container flex p-2 text-9xl bg-foreground/5 gap-2">
+        <div className="container flex p-4 text-9xl gap-4">
           {
             iconsArray.map((icon, index) => (
               <SkillCard key={index} name={icon.name} svg={icon.svg}/>

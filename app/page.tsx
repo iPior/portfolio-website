@@ -1,6 +1,7 @@
 // import Image from "next/image";
 import { Header } from "@/components/content/header"
 import { Footer } from "@/components/content/footer"
+import { FooterBasic } from "@/components/content/footer-simple"
 import { Hero } from "@/components/content/hero"
 import { ThemeProvider } from "@/context/theme-provider"
 import { Skills } from "@/components/content/skills"
@@ -24,9 +25,9 @@ export default function Home() {
             <About />
             <Skills />
             <Projects />
-            <Music />
+            {/* <Music /> */}
         </PatternWrapper>
-        <Footer />
+        <FooterBasic />
       </ThemeProvider>
     </main>
   )

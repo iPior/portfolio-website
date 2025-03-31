@@ -10,7 +10,7 @@ export default function SkillCard({ name, svg }:SkillCardProps){
 
 
   return (
-    <div className="flex flex-col rounded-lg p-2 items-center bg-background">
+    <div className="flex flex-col p-2 items-center bg-card text-card-foreground rounded-xl border shadow-sm">
         <Image 
           src={svg} 
           alt={name}

@@ -15,13 +15,13 @@ interface ProjectCardProps {
 
 export default function SkillCard({ image, title, description, tags, liveUrl, githubUrl  }:ProjectCardProps){
   return (
-    <Card className="bg-background h-150 pt-0">
+    <Card className="h-150 pt-0">
         <Image
             src={image}
             alt={title}
             width={600}
             height={400}
-            className="h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-2xl px-1 pt-1"
+            className="h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-xl"
         />
 
         <CardContent className="h-1/2 px-4 flex flex-col justify-between">
