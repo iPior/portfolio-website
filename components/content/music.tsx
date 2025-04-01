@@ -1,4 +1,4 @@
-import BorderWrapper from "@/components/border-wrapper"
+import BorderWrapper from "@/components/wrappers/border-wrapper"
 import MusicCard from "@/components/cards/music-card"
 
 export function Music() {

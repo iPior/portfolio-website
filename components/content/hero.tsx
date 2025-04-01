@@ -1,4 +1,4 @@
-import BorderWrapper from "@/components/border-wrapper"
+import BorderWrapper from "@/components/wrappers/border-wrapper"
 
 export function Hero() {
   return (
@@ -11,7 +11,7 @@ export function Hero() {
         </BorderWrapper>
         <BorderWrapper className="mt-2 md:mt-4 px-2 md:px-4">
           <p className="text-md sm:text-xl md:text-2xl text-muted-foreground max-w-2xl">
-            <span className="underline text-accent animate-pulse">Full-stack</span> developer based in <span className="underline text-accent animate-pulse">Toronto</span>.
+            <span className="underline text-accent animate-pulse">Full-stack</span> developer based in <span className="">Toronto</span>.
           </p>
         </BorderWrapper>
       </section>

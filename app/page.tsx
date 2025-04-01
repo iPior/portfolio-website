@@ -8,7 +8,7 @@ import { Skills } from "@/components/content/skills"
 import { Projects } from "@/components/content/projects"
 import { About } from "@/components/content/about"
 import { Music } from "@/components/content/music"
-import PatternWrapper from "@/components/pattern-wrapper"
+import PatternWrapper from "@/components/wrappers/pattern-wrapper"
 
 export default function Home() {
   return (

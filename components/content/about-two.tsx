@@ -1,4 +1,4 @@
-import BorderWrapper from "../border-wrapper"
+import BorderWrapper from "../wrappers/border-wrapper"
 import ProfileCard from "@/components/cards/profile-card"
 import EducationCard from "@/components/cards/education-card"
 import SkillCard from "@/components/cards/skill-card"

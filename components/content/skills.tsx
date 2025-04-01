@@ -1,5 +1,5 @@
 import SkillCard from '@/components/badges/skill-badge'
-import BorderWrapper from "@/components/border-wrapper";
+import BorderWrapper from "@/components/wrappers/border-wrapper";
 
 export function Skills() {
 

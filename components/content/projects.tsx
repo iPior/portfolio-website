@@ -1,5 +1,5 @@
 import ProjectCard from "@/components/cards/project-card"
-import BorderWrapper from "@/components/border-wrapper"
+import BorderWrapper from "@/components/wrappers/border-wrapper"
 // import spotidash from "@/public/images/spotidash1."
 
 export function Projects() {
