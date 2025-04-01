@@ -1,12 +1,4 @@
 import BorderWrapper from "@/components/border-wrapper"
-import { Gravitas_One } from "next/font/google";
-
-const gravitas = Gravitas_One({
-  variable: "--font-gravitas",
-  weight: ["400"],
-  subsets: ['latin'],
-})
-
 
 export function Hero() {
   return (

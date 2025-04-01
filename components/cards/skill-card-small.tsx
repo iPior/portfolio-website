@@ -18,7 +18,7 @@ export default function SkillCardSmall({ name, svg }:SkillCardProps){
           width={90}
           className={clsx(name === 'Next.js' && "dark:invert")}
         />    
-        <h2 className="text-lg text-center font-bold">{name}</h2>
+        <h2 className="text-md text-center font-bold">{name}</h2>
     </div>
   )
 }

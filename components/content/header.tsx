@@ -15,7 +15,7 @@ export function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 mx-auto">
+    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <BorderWrapper>
         <div className="container mx-auto border-r border-l flex h-16 items-center justify-between px-8">
             <Link href="/" className="font-bold text-xl">
@@ -33,9 +33,9 @@ export function Header() {
             <Link href="#about" className="text-sm font-medium hover:text-accent transition-colors">
               About Me
             </Link>
-            {/* <Link href="#skills" className="text-sm font-medium hover:text-accent transition-colors">
+            <Link href="#skills" className="text-sm font-medium hover:text-accent transition-colors">
               Skills
-            </Link> */}
+            </Link>
             <Link href="#projects" className="text-sm font-medium hover:text-accent transition-colors">
               Projects
             </Link>

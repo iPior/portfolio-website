@@ -72,7 +72,7 @@ export function AboutTwo() {
       svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
     },
     {
-      name: "Tailwind",
+      name: "Tailwind CSS",
       svg: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     },
     {
