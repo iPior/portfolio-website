@@ -33,9 +33,9 @@ export function Header() {
             <Link href="#about" className="text-sm font-medium hover:text-accent transition-colors">
               About Me
             </Link>
-            <Link href="#skills" className="text-sm font-medium hover:text-accent transition-colors">
+            {/* <Link href="#skills" className="text-sm font-medium hover:text-accent transition-colors">
               Skills
-            </Link>
+            </Link> */}
             <Link href="#projects" className="text-sm font-medium hover:text-accent transition-colors">
               Projects
             </Link>

@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Coffee, Code, Laptop, GraduationCap, Heart, BookOpen, Clock, Speaker, Disc3, Trees, Gamepad2, Dumbbell, BookA, Palette, MapPin } from "lucide-react"
 
-export function About() {
+export function AboutTwo() {
 
   const badgeFacts = [
     { icon: <Code className="h-4 w-4" />, label: "Full-Stack Developer" },
@@ -192,13 +192,13 @@ export function About() {
           </Card>
 
           {/* Skills Column */}
-          {/* <Card className="h-full">
+          <Card className="h-full">
             <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <Code className="h-5 w-5 text-primary" />
                   <h3 className="text-lg font-bold">Skills</h3>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-2">
                   {
                     iconsArray.map((icon, index) => (
                       <SkillCardSmall key={index} name={icon.name} svg={icon.svg}/>
@@ -206,10 +206,10 @@ export function About() {
                   }
                 </div>
             </CardContent>
-          </Card> */}
+          </Card>
 
           {/* Passions Column */}
-          <Card className="h-full">
+          {/* <Card className="h-full">
             <CardContent className="p-6">
               <div className="flex items-center gap-2 mb-4">
                 <Heart className="h-5 w-5 text-primary" />
@@ -239,7 +239,7 @@ export function About() {
               </ul>
               </div>
             </CardContent>
-          </Card>
+          </Card> */}
         </BorderWrapper>
     </section>
   )
