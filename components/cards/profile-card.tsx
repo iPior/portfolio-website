@@ -14,15 +14,15 @@ export default function ProfileCard(){
 
   return (
     <Card className="h-full">
-        <CardContent className="p-6 flex flex-col justify-between items-center text-center space-y-4">
-        <h3 className="text-4xl font-bold mb-4">Piotr Szaran</h3>
+        <CardContent className="p-4 md:p-6 flex flex-col justify-between items-center text-center space-y-4">
+        <h3 className="text-4xl font-bold mb-4 md:block hidden">Piotr Szaran</h3>
         <div className="relative w-48 h-48 md:w-58 md:h-58 rounded-3xl overflow-hidden border-4 border-primary mb-4">
             <Image src="/images/headshot.jpg" alt="Profile" fill className="object-cover" />
         </div>
             
-        <div className="flex flex-wrap justify-center gap-2 w-2/3">
+        <div className="flex flex-wrap justify-center gap-2 w-4/5 md:w-2/3">
             {badgeFacts.map((fact, index) => (
-            <Badge key={index} variant="outline" className="flex items-center gap-1 px-2 py-1 text-sm">
+            <Badge key={index} variant="outline" className="flex items-center gap-1 px-2 py-1 text-xs md:text-sm">
                 {fact.icon}
                 <span>{fact.label}</span>
             </Badge>

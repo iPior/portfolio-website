@@ -31,13 +31,12 @@ export function Projects() {
 
   return (
     <section id="projects" className="scroll-mt-16">
-      <BorderWrapper className="mt-24 px-4">
-        <h1 className="text-6xl font-bold">Projects</h1>
+      <BorderWrapper className="mt-18 md:mt-24 px-2 md:px-4">
+        <h1 className="text-4xl md:text-6xl font-bold">Projects</h1>
       </BorderWrapper>
-      <BorderWrapper className="mt-4">
-        <div className="container">
+      <BorderWrapper className="container mt-2 md:mt-4">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 md:gap-4 p-2 md:p-4">
             {projects.map((project, id) => (
               <ProjectCard 
                 key={id}
@@ -49,7 +48,6 @@ export function Projects() {
                 githubUrl={project.githubUrl}
               />
             ))}
-          </div>
         </div>
       </BorderWrapper>
     </section>

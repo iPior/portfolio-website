@@ -45,7 +45,7 @@ export default function SkillCard(){
 
   return (
     <Card className="h-full">
-        <CardContent className="p-6">
+        <CardContent className="p-4 md:p-6">
             <div className="flex items-center gap-2 mb-4">
                 <Code className="h-5 w-5 text-primary" />
                 <h3 className="text-xl font-bold">Skills</h3>

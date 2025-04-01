@@ -25,7 +25,7 @@ export default function SkillCard({ image, title, description, tags, liveUrl, gi
             className="h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-xl"
         />
 
-        <CardContent className="h-1/2 px-4 flex flex-col justify-between">
+        <CardContent className="h-1/2 px-4 flex flex-col justify-between ">
 
             <div>
                 <h3 className="text-2xl font-bold mb-2">{title}</h3>

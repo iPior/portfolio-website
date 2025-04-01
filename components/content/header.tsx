@@ -22,11 +22,7 @@ export function Header() {
               Piotr Szaran
             </Link>
 
-          {/* Mobile menu button */}
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            <span className="sr-only">Toggle menu</span>
-          </Button>
+          
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center gap-6">
@@ -39,9 +35,6 @@ export function Header() {
             <Link href="#projects" className="text-sm font-medium hover:text-accent transition-colors">
               Projects
             </Link>
-            {/* <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Contact
-            </Link> */}
             <div className="flex items-center gap-3">
               <Button variant="outline" size="icon" asChild className="h-9 w-9">
                 <a href="https://github.com/ipior" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -62,23 +55,67 @@ export function Header() {
             </div>
           </nav>
 
-          {/* Mobile navigation */}
+          {/* Mobile menu button */}
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
+            {isMenuOpen ? <X className="h-10 w-10" /> : <Menu className="h-10 w-10" />}
+          </Button>
+
           {isMenuOpen && (
-            <div className="absolute top-16 left-0 right-0 bg-background border-b md:hidden">
-              <nav className="flex flex-col p-4 space-y-4">
+            <div className="absolute bg-background container mx-auto top-16 left-0 right-0 border-b border-r border-l md:hidden">
+              <nav className="flex text-xs sm:text-sm py-4 items-center justify-between px-8 font-medium">
+                <Link
+                  href="#about"
+                  className="hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About Me
+                </Link>
+                {/* <span>•</span> */}
+                <Link
+                  href="#skills"
+                  className="hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Skills
+                </Link>
+                {/* <span>•</span> */}
+                <Link
+                  href="#projects"
+                  className="hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Projects
+                </Link>
+                {/* <span>•</span> */}
+                <Link
+                  href="#https://linkedin.com/in/piotrszaran/"
+                  className="hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  LinkedIn
+                </Link>
+                {/* <span>•</span> */}
+                <Link
+                  href="#https://github.com/ipior"
+                  className="hover:text-primary transition-colors pr-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Github
+                </Link>
+              </nav>
+            </div>
+          )} 
+         
+
+          {/* {isMenuOpen && (
+            <div className="absolute container mx-auto top-16 left-0 right-0 md:hidden flex justify-end">
+              <nav className="flex flex-col p-4 items-end justify-center pl-10 gap-4 px-12 bg-background border-b border-r border-l">
                 <Link
                   href="#about"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  About
-                </Link>
-                <Link
-                  href="#projects"
-                  className="text-sm font-medium hover:text-primary transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Projects
+                  About Me
                 </Link>
                 <Link
                   href="#skills"
@@ -88,19 +125,29 @@ export function Header() {
                   Skills
                 </Link>
                 <Link
-                  href="#contact"
+                  href="#projects"
                   className="text-sm font-medium hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact
+                  Projects
                 </Link>
-                <Button asChild className="w-full" onClick={() => setIsMenuOpen(false)}>
-                  <Link href="#contact">Hire Me</Link>
-                </Button>
-                
+                <Link
+                  href="#https://linkedin.com/in/piotrszaran/"
+                  className="text-sm font-medium hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  LinkedIn
+                </Link>
+                <Link
+                  href="#https://github.com/ipior"
+                  className="text-sm font-medium hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Github
+                </Link>
               </nav>
             </div>
-          )}
+          )} */}
         </div>
       </BorderWrapper>
     </header>

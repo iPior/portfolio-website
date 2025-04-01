@@ -14,10 +14,10 @@ export default function EducationCard(){
 
   return (
     <Card className="h-full">
-    <CardContent className="p-6">
-      <div className="flex items-center gap-2 mb-4">
+    <CardContent className="p-4 md:p-6">
+      <div className="flex gap-2 mb-4">
         <GraduationCap className="h-5 w-5 text-primary" />
-        <h3 className="text-xl font-bold">Education</h3>
+        <h3 className="text-md md:text-xl font-bold">Education</h3>
       </div>
 
       <div className="space-y-4">
@@ -44,7 +44,7 @@ export default function EducationCard(){
       <div className="mt-6 pt-6 border-t">
         <div className="flex items-center gap-2 mb-4">
           <BookOpen className="h-5 w-5 text-primary" />
-          <h3 className="text-xl font-bold">Interested in Learning More About</h3>
+          <h3 className="text-md md:text-xl font-bold">Interested in Learning More About</h3>
         </div>
         <ul className="space-y-3 flex flex-col mt-2">
           {interests.map((item, index) => (
