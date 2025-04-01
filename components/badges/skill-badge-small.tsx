@@ -10,7 +10,7 @@ export default function SkillBadgeSmall({ name, svg }:SkillCardProps){
 
 
   return (
-    <div className="relative p-1 flex flex-col items-center bg-card text-card-foreground hover:scale-105 transition-transform duration-200 ease-in-out hover:bg-card/90">
+    <div className="relative p-1 flex flex-col items-center text-card-foreground hover:scale-105 transition-transform duration-200 ease-in-out hover:bg-card/90">
         <Image 
           src={svg} 
           alt={name}

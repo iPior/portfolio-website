@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink, Github } from "lucide-react"
@@ -26,13 +26,13 @@ export default function SkillCard({ image, title, description, tags, liveUrl, gi
         />
 
         <CardContent className="h-1/2 px-4 flex flex-col justify-between ">
-
+            
             <div>
-                <h3 className="text-2xl font-bold mb-2">{title}</h3>
-                <p className="mb-4 text-foreground/70">{description}</p>
+                <h3 className="text-xl md:text-2xl font-bold mb-2">{title}</h3>
+                <p className="mb-4 text-foreground/70 ">{description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                     {tags?.map((tag) => (
-                    <Badge key={tag} variant="outline" className="px-2 py-1 text-sm">
+                    <Badge key={tag} variant="outline" className="px-2 py-1 text-xs md:text-sm">
                         {tag}
                     </Badge>
                     ))}

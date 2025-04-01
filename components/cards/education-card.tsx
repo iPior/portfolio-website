@@ -1,7 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card"
 import {GraduationCap,  BookOpen } from "lucide-react"
+import { cn } from "@/lib/utils";
 
-export default function EducationCard(){
+interface EducationCardProps {
+  className?: string;
+}
+
+export default function EducationCard({className}:EducationCardProps){
 
     const interests = [
         "WebSocket requests",
@@ -13,11 +18,11 @@ export default function EducationCard(){
 
 
   return (
-    <Card className="h-full">
+    <Card className={cn("h-full bg-transparent md:bg-card md:border border-0 p-0 md:py-6 shadow-none md:shadow-sm", className)}>
     <CardContent className="p-4 md:p-6">
-      <div className="flex gap-2 mb-4">
+      <div className="flex items-center gap-2 mb-4 border-t md:border-t-0 pt-6 md:pt-0">
         <GraduationCap className="h-5 w-5 text-primary" />
-        <h3 className="text-md md:text-xl font-bold">Education</h3>
+        <h3 className="text-xl md:text-2xl font-bold">Education</h3>
       </div>
 
       <div className="space-y-4">
@@ -44,11 +49,11 @@ export default function EducationCard(){
       <div className="mt-6 pt-6 border-t">
         <div className="flex items-center gap-2 mb-4">
           <BookOpen className="h-5 w-5 text-primary" />
-          <h3 className="text-md md:text-xl font-bold">Interested in Learning More About</h3>
+          <h3 className="text-xl md:text-2xl font-bold"> Learning About</h3>
         </div>
         <ul className="space-y-3 flex flex-col mt-2">
           {interests.map((item, index) => (
-            <li key={index} className="flex items-start text-md">
+            <li key={index} className="flex items-start text-sm lg:text-md">
               <span className="text-primary mr-2">•</span>
               <span>{item}</span>
             </li>

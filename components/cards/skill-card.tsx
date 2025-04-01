@@ -1,8 +1,13 @@
 import SkillCardSmall from "@/components/badges/skill-badge-small";
 import { Card, CardContent } from "@/components/ui/card"
 import {Code} from "lucide-react"
+import { cn } from "@/lib/utils";
 
-export default function SkillCard(){
+interface SkillCardProps {
+  className?: string;
+}
+
+export default function SkillCard({className}:SkillCardProps){
 
     const iconsArray = [
         {
@@ -44,11 +49,11 @@ export default function SkillCard(){
       ];
 
   return (
-    <Card className="h-full">
+    <Card className={cn("h-full bg-transparent md:bg-card border-0 md:border p-0 md:py-6 shadow-none md:shadow-sm", className)}>
         <CardContent className="p-4 md:p-6">
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-4 border-t md:border-t-0 pt-6 md:pt-0">
                 <Code className="h-5 w-5 text-primary" />
-                <h3 className="text-xl font-bold">Skills</h3>
+                <h3 className="text-xl md:text-2xl font-bold">Skills</h3>
             </div>
             <div className="grid grid-cols-3 gap-2">
                 {
