@@ -6,7 +6,7 @@ interface SkillCardProps {
   svg: string;
 }
 
-export default function SkillCardSmall({ name, svg }:SkillCardProps){
+export default function SkillBadgeSmall({ name, svg }:SkillCardProps){
 
 
   return (
@@ -16,9 +16,9 @@ export default function SkillCardSmall({ name, svg }:SkillCardProps){
           alt={name}
           height={90}
           width={90}
-          className={clsx(name === 'Next.js' && "dark:invert")}
+          className={clsx(name === 'Next.js' && "dark:invert", "mb-2")}
         />    
-        <h2 className="text-md text-center font-bold">{name}</h2>
+        <h2 className="text-sm text-center font-bold">{name}</h2>
     </div>
   )
 }
