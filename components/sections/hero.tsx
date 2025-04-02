@@ -1,8 +1,7 @@
-import BorderWrapper from "@/components/wrappers/border-wrapper"
+import { BorderWrapper } from "@/components/wrappers/border-wrapper"
 
 export function Hero() {
-  return (
-      // <section  className="relative p-20 md:py-32 flex">     
+  return (   
       <section id="hero" className="mx-auto w-full">
         <p className="text-md md:text-xl text-muted-foreground w-full font-bold mt-18 md:mt-24 px-4">Hi, I'm</p>
         <BorderWrapper className="px-3 pb-2 xs:pb-3 sm:pb-4 lg:px-1 lg:pb-6 font-extrabold text-7xl xs:text-8xl sm:text-9xl lg:text-hero uppercase">

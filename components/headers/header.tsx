@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Menu, X, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
-import BorderWrapper from "@/components/wrappers/border-wrapper"
+import { BorderWrapper } from "@/components/wrappers/border-wrapper"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

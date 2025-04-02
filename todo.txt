@@ -1,3 +1,5 @@
 Style ideas
 - load/fade on scroll? 
-- responsive design
+
+To Do eventually
+- delete not used fonts and images
