@@ -14,18 +14,18 @@ interface ProjectCardProps {
   githubUrl: string;
 }
 
-export default function SkillCard({ image, title, description, tags, liveUrl, githubUrl  }:ProjectCardProps){
+export default function ProjectCard({ image, title, description, tags, liveUrl, githubUrl  }:ProjectCardProps){
   return (
-    <Card className="h-150 pt-0 ">
+    <Card className=" md:h-150 pt-0 ">
         <Image
             src={image}
             alt={title}
             width={600}
             height={400}
-            className="h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-xl"
+            className="h-60 md:h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-xl"
         />
 
-        <CardContent className="h-1/2 px-4 flex flex-col justify-between ">
+        <CardContent className="md:h-1/2 px-4 flex flex-col justify-between ">
             
             <div>
                 <h3 className="text-xl md:text-2xl font-bold mb-2">{title}</h3>

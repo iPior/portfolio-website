@@ -52,7 +52,7 @@ export function Skills() {
         <h1 className="text-4xl md:text-6xl font-bold">Skills</h1>
       </BorderWrapper>
       <BorderWrapper className="container mt-2 md:mt-4">
-        <div className=" xl:flex text-xl md:text-9xl gap-2 md:gap-4 p-2 md:p-4 grid xl:flex-wrap xl:justify-center grid-cols-2 sm:grid-cols-3">
+        <div className=" lg:flex text-xl md:text-9xl gap-2 md:gap-4 p-2 md:p-4 grid xl:justify-center grid-cols-2 sm:grid-cols-3">
           {
             iconsArray.map((icon, index) => (
               <SkillCard key={index} name={icon.name} svg={icon.svg}/>

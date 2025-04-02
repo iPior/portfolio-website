@@ -10,7 +10,7 @@ export default function EducationCard({className}:EducationCardProps){
 
     const interests = [
         "WebSocket requests",
-        "Optiziming web application performance", 
+        "Optimizing web application performance", 
         "Intermediate Next.js and TypeScript concepts",
         "MongoDB and Prisma",
         "React Native and Electron",
@@ -40,7 +40,7 @@ export default function EducationCard({className}:EducationCardProps){
             </li>
             <li>
               <span className="text-primary text-md mr-2">•</span>
-              <span className="text-sm">Mathematics Major</span>
+              <span className="text-sm">Mathematics Minor</span>
             </li>
           </ul>
         </div>

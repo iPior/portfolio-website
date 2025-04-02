@@ -36,7 +36,7 @@ export function Projects() {
       </BorderWrapper>
       <BorderWrapper className="container mt-2 md:mt-4">
 
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2 md:gap-4 p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 p-4">
             {projects.map((project, id) => (
               <ProjectCard 
                 key={id}
