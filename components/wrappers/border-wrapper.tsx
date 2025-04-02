@@ -6,7 +6,7 @@ interface BorderWrapperProps {
   className?: string
 }
 
-export default function BorderWrapper({ children, className }: BorderWrapperProps) {
+export function BorderWrapper({ children, className }: BorderWrapperProps) {
   return (
       <div className={cn("relative", 
       "before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-foreground/10 before:-left-[100vw]", 

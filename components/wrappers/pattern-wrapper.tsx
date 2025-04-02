@@ -6,7 +6,7 @@ interface PatternWrapperProps {
   className?: string;
 }
 
-export default function PatternWrapper({ children, className }: PatternWrapperProps) {
+export function PatternWrapper({ children, className }: PatternWrapperProps) {
   return (
     <div className="h-full overflow-hidden"> 
       <div className="container border-l border-r flex mx-auto h-full">

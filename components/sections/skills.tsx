@@ -1,5 +1,6 @@
 import SkillCard from '@/components/badges/skill-badge'
-import BorderWrapper from "@/components/wrappers/border-wrapper";
+import { BorderWrapper } from "@/components/wrappers/border-wrapper";
+import { SectionHeader } from "@/components/headers/section-header"
 
 export function Skills() {
 
@@ -48,9 +49,7 @@ export function Skills() {
 
   return (
     <section id="skills" className="scroll-mt-16">
-      <BorderWrapper className="mt-18 md:mt-24 px-2 md:px-4">
-        <h1 className="text-4xl md:text-6xl font-bold">Skills</h1>
-      </BorderWrapper>
+      <SectionHeader header="Skills"/>
       <BorderWrapper className="container mt-2 md:mt-4">
         <div className=" lg:flex text-xl md:text-9xl gap-2 md:gap-4 p-2 md:p-4 grid xl:justify-center grid-cols-2 sm:grid-cols-3">
           {

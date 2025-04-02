@@ -1,5 +1,6 @@
-import BorderWrapper from "@/components/wrappers/border-wrapper"
 import MusicCard from "@/components/cards/music-card"
+import { BorderWrapper } from "@/components/wrappers/border-wrapper";
+import { SectionHeader } from "@/components/headers/section-header";
 
 export function Music() {
 
@@ -102,9 +103,7 @@ export function Music() {
 
   return (
     <section id="music" className="">
-      <BorderWrapper className="mt-24">
-        <h1 className="text-6xl font-bold">DJ Mixes</h1>
-      </BorderWrapper>
+      <SectionHeader header="DJ Mixes"/>
       <BorderWrapper className="mt-4">
         <div className="container grid grid-cols-4 gap-4 p-2 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 dark:[--pattern-fg:var(--color-white)]/10">
           {
