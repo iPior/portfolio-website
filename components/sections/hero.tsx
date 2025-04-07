@@ -10,7 +10,7 @@ export function Hero() {
         </BorderWrapper>
         <BorderWrapper className="mt-2 md:mt-4 px-4">
           <p className="text-md sm:text-xl md:text-2xl text-muted-foreground max-w-2xl">
-            A <span className="underline text-accent animate-pulse">Full-stack</span> developer based in <span className="">Toronto</span>.
+            A <span className="underline text-accent animate-pulse">Web</span> Developer based in <span className="">Toronto</span>.
           </p>
         </BorderWrapper>
       </section>

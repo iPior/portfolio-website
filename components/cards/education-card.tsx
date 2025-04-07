@@ -12,7 +12,7 @@ export default function EducationCard({className}:EducationCardProps){
         "WebSocket requests",
         "Optimizing web application performance", 
         "Intermediate Next.js and TypeScript concepts",
-        "MongoDB and Prisma",
+        "Tanstack Start, MongoDB, Prisma, Supabase",
         "React Native and Electron",
       ]
 
