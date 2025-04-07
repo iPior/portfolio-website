@@ -9,7 +9,6 @@ export function Projects() {
       description: "SpotiDash is a web application that provides users with a personalized dashboard for exploring their favorite music on Spotify.",
       image: "/images/spotidash.png",
       tags: ["TypeScript", "Next.js", "Tailwind CSS", "Shadcn/ui", "Spotify API", "NextAuth.js"],
-      liveUrl: "#",
       githubUrl: "https://github.com/iPior/nextjs-spotify-dashboard",
     },
     {
