@@ -67,14 +67,14 @@ export function Header() {
                 >
                   About Me
                 </Link>
-                {/* <span>•</span> */}
+                {/* <span>•</span>
                 <Link
                   href="#skills"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Skills
-                </Link>
+                </Link> */}
                 {/* <span>•</span> */}
                 <Link
                   href="#projects"
