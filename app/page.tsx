@@ -1,9 +1,9 @@
 import { Header } from "@/components/headers/header"
 import { Hero } from "@/components/sections/hero"
-import { Skills } from "@/components/sections/skills"
 import { Projects } from "@/components/sections/projects"
 import { AboutTwo } from "@/components/sections/about-two"
 import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
+import { FooterBasic } from "@/components/headers/footer-simple"
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
             <Hero />
             <AboutTwo />
             <Projects />
-            <Skills />
         </PatternWrapper>
+        <FooterBasic/>
     </main>
   )
 }

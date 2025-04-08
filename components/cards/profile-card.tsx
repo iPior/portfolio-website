@@ -21,7 +21,7 @@ export default function ProfileCard({className}:ProjectCardProps){
     <Card className={cn("h-full bg-transparent md:bg-card border-0 md:border p-0 md:py-6 shadow-none md:shadow-sm", className)}>
         <CardContent className="p-2 md:p-6 flex flex-col justify-between md:items-center space-y-4">
         {/* <h3 className="text-4xl font-bold mb-4 md:block hidden">Piotr Szaran</h3> */}
-        <div className="relative w-68 h-68 md:w-58 md:h-58 rounded-3xl overflow-hidden border-1 shadow-2xl border-primary    mb-4">
+        <div className="relative w-68 h-68 md:w-58 md:h-58 rounded-3xl overflow-hidden border shadow-2xl mb-4">
             <Image src="/images/headshot.jpg" alt="Profile" fill className="object-cover" />
         </div>
         <h3 className="text-xl md:text-2xl font-bold mb-2">Piotr Szaran</h3>

@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/context/theme-provider"
-import { FooterBasic } from "@/components/headers/footer-simple"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +41,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <FooterBasic/>
         </ThemeProvider>
       </body>
     </html>
