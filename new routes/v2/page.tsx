@@ -2,7 +2,8 @@
 import { Header } from "@/components/headers/header"
 import { Hero } from "@/components/sections/hero"
 import { Projects } from "@/components/sections/projects"
-import { AboutTwo } from "@/components/sections/about-two"
+import { About } from "@/components/sections/about"
+import { Skills } from "@/components/sections/skills"
 import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 
 export default function Home() {
@@ -11,9 +12,9 @@ export default function Home() {
         <Header />
         <PatternWrapper>
             <Hero />
-            <AboutTwo />
+            <About />
+            <Skills />
             <Projects />
-            {/* <Skills /> */}
         </PatternWrapper>
     </main>
   )

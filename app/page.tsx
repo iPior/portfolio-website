@@ -1,10 +1,8 @@
-// import Image from "next/image";
 import { Header } from "@/components/headers/header"
 import { Hero } from "@/components/sections/hero"
-import { ThemeProvider } from "@/context/theme-provider"
 import { Skills } from "@/components/sections/skills"
 import { Projects } from "@/components/sections/projects"
-import { About } from "@/components/sections/about"
+import { AboutTwo } from "@/components/sections/about-two"
 import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 
 export default function Home() {
@@ -13,10 +11,9 @@ export default function Home() {
         <Header />
         <PatternWrapper>
             <Hero />
-            <About />
-            <Skills />
+            <AboutTwo />
             <Projects />
-            {/* <Music /> */}
+            <Skills />
         </PatternWrapper>
     </main>
   )

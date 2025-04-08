@@ -1,6 +1,5 @@
 // import Image from "next/image";
 import { Header } from "@/components/headers/header"
-import { FooterBasic } from "@/components/headers/footer-simple"
 import { Hero } from "@/components/sections/hero"
 import { Music } from "@/components/sections/music"
 import { AboutTwo } from "@/components/sections/about-two"
