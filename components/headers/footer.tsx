@@ -1,7 +1,6 @@
 'use client'
 
-import Link from "next/link"
-import { ArrowUp, Mail, MapPin, Frame } from "lucide-react"
+import { ArrowUp, Mail, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Footer() {

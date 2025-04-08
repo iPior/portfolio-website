@@ -1,7 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { ExternalLink } from "lucide-react"
 
 interface MusicCardProps {
   title: string;
@@ -28,15 +25,6 @@ export default function MusicCard({ title, description, src }: MusicCardProps) {
             </div>
         </CardContent>
     </Card>
-
-    // <div className="rounded-2xl h-32">
-    //   <iframe
-    //     width="100%"
-    //     height="100%"
-    //     src={src}
-    //     style={{ borderRadius: "0.625rem", borderTopRightRadius: "0.625rem", padding: "0.5rem", background: "transparent" }}
-    //     ></iframe>
-    //   </div>
 
   );
 }
