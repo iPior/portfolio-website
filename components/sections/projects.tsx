@@ -1,6 +1,8 @@
 import ProjectCard from "@/components/cards/project-card"
 import { BorderWrapper } from "@/components/wrappers/border-wrapper"
 import { SectionHeader } from "@/components/headers/section-header"
+import { FadeUp } from "@/components/animations/fade-up"
+import { FadeRight } from "../animations/fade-right"
 
 export function Projects() {
   const projects = [
@@ -30,19 +32,22 @@ export function Projects() {
 
   return (
     <section id="projects" className="scroll-mt-16">
-      <SectionHeader header="Projects"/>
+      <FadeRight>
+        <SectionHeader header="Projects"/>
+      </FadeRight>
       <BorderWrapper className="container mt-2 md:mt-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 p-4">
             {projects.map((project, id) => (
-              <ProjectCard 
-                key={id}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-                tags={project.tags}
-                liveUrl={project.liveUrl}
-                githubUrl={project.githubUrl}
-              />
+              <FadeUp key={id}>
+                <ProjectCard 
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                  tags={project.tags}
+                  liveUrl={project.liveUrl}
+                  githubUrl={project.githubUrl}
+                />
+              </FadeUp>
             ))}
         </div>
       </BorderWrapper>
