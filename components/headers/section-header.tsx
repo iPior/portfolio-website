@@ -1,5 +1,4 @@
 import { BorderWrapper } from "@/components/wrappers/border-wrapper"
-import { Reveal } from "@/components/animations/reveal";
 
 interface SectionHeaderProps {
     header: string;
