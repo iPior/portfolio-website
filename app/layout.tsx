@@ -17,14 +17,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Hi, I'm Piotr Szaran",
   description: "A Web Developer based in Toronto.",
-  openGraph: {
-    title: "Piotr Szaran - Portfolio",
-    description: "Showcasing my projects and skills in web development.",
-    url: "https://piotrszaran.com", 
-    siteName: "Piotr's Portfolio",
-    locale: "en_US",
-    type: "website",
-  },
 };
 
 export default function RootLayout({
