@@ -1,28 +1,10 @@
-// import React from 'react'
-// import './styles.css'
-
-// export const metadata = {
-//   description: 'A blank template using Payload in a Next.js app.',
-//   title: 'Payload Blank Template',
-// }
-
-// export default async function RootLayout(props: { children: React.ReactNode }) {
-//   const { children } = props
-
-//   return (
-//     <html lang="en">
-//       <body>
-//         <main>{children}</main>
-//       </body>
-//     </html>
-//   )
-// }
-
 import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/context/theme-provider"
 
+import { FooterBasic } from "@/components/headers/footer-simple"
+import { Header } from "@/components/headers/header"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,7 +38,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Piotr Szaran" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-gradient-to-t dark:bg-gradient-to-b from-blue-50 dark:from-gray-100/5 to-background`}
       >
         <ThemeProvider
           attribute="class"
@@ -64,7 +46,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
+          <FooterBasic />
         </ThemeProvider>
       </body>
     </html>

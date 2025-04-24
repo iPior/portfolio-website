@@ -35,8 +35,6 @@ export default buildConfig({
   }),
   sharp,
   plugins: [
-    // payloadCloudPlugin(),
-    // storage-adapter-placeholder
     vercelBlobStorage({
       // Specify which collections should use Vercel Blob
       collections: {

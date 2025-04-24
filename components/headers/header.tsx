@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { ThemeToggle } from "@/components/wrappers/theme-toggle"
 import { BorderWrapper } from "@/components/wrappers/border-wrapper"
 
 export function Header() {
@@ -31,6 +31,9 @@ export function Header() {
             </Link>
             <Link href="#projects" className="text-sm font-medium hover:text-accent transition-colors">
               Projects
+            </Link>
+            <Link href="/blogs" className="text-sm font-medium hover:text-accent transition-colors">
+              Blogs
             </Link>
             <div className="flex items-center gap-3">
               <Button variant="outline" size="icon" asChild className="h-9 w-9">
@@ -67,15 +70,6 @@ export function Header() {
                 >
                   About Me
                 </Link>
-                {/* <span>•</span>
-                <Link
-                  href="#skills"
-                  className="hover:text-primary transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Skills
-                </Link> */}
-                {/* <span>•</span> */}
                 <Link
                   href="#projects"
                   className="hover:text-primary transition-colors"
@@ -83,7 +77,13 @@ export function Header() {
                 >
                   Projects
                 </Link>
-                {/* <span>•</span> */}
+                <Link
+                  href="/blogs"
+                  className="hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Skills
+                </Link>
                 <Link
                   href="#https://linkedin.com/in/piotrszaran/"
                   className="hover:text-primary transition-colors"
@@ -91,7 +91,6 @@ export function Header() {
                 >
                   LinkedIn
                 </Link>
-                {/* <span>•</span> */}
                 <Link
                   href="#https://github.com/ipior"
                   className="hover:text-primary transition-colors pr-4"

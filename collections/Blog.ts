@@ -12,9 +12,19 @@ export const Blog: CollectionConfig = {
       required: true,
     },
     {
+      name: 'author',
+      type: 'text',
+      required: false,
+    },
+    {
       name: 'date',
       type: 'date',
       required: true,
+    },
+    {
+      name: 'read-time',
+      type: 'text',
+      required: false,
     },
     {
       name: 'content',
