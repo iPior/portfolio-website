@@ -59,47 +59,43 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   }
 
   return (
-    <PatternWrapper>
-        <article className="container max-w-4xl mx-auto px-4 py-12">
-            <div className="space-y-3">
-                <div className="space-y-2">
-
+      <PatternWrapper className="">
+          <article className="h-full container max-w-4xl mx-auto px-4 pt-12">
+              <div className="space-y-3">
+                  <div className="space-y-2">
                     <BorderWrapper className="py-4">
                         <h1 className="text-4xl font-bold sm:text-6xl">{post.title}</h1>
                     </BorderWrapper>
                     <div className="flex flex-wrap gap-4 text-sm text-center text-muted-foreground">
-                                <div className="flex items-center gap-1">
-                                <CalendarIcon className="h-4 w-4" />
-                                <time dateTime={post.date}>
-                                    {new Date(post.date).toLocaleDateString("en-US", {
-                                        year: "numeric",
-                                        month: "long",
-                                        day: "numeric",
-                                    })}
-                                </time>
-                                </div>
-                                <div className="flex items-center gap-1">
-                                <UserIcon className="h-4 w-4" />
-                                <span>{post.author}</span>
-                                </div>
-                                <div className="flex items-center gap-1">
-                                <ClockIcon className="h-4 w-4" />
-                                <span>{post.readTime}</span>
-                                </div>
+                        <div className="flex items-center gap-1">
+                          <CalendarIcon className="h-4 w-4" />
+                          <time dateTime={post.date}>
+                              {new Date(post.date).toLocaleDateString("en-US", {
+                                  year: "numeric",
+                                  month: "long",
+                                  day: "numeric",
+                              })}
+                          </time>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <UserIcon className="h-4 w-4" />
+                          <span>{post.author}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <ClockIcon className="h-4 w-4" />
+                          <span>{post.readTime}</span>
+                        </div>
                     </div>
                     <div className="relative aspect-video overflow-hidden rounded-lg border">
                         {/* <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" priority /> */}
                     </div>
+                  </div>
+                  <BorderWrapper className="py-4">
+                      <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                  </BorderWrapper>
+              </div>
+          </article>
+      </PatternWrapper>
 
-                </div>
-
-                
-
-                <BorderWrapper className="py-4">
-                    <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                </BorderWrapper>
-            </div>
-        </article>
-    </PatternWrapper>
   )
 }
