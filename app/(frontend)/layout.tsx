@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/context/theme-provider"
 
-import { FooterBasic } from "@/components/headers/footer-simple"
 import { Header } from "@/components/headers/header"
+import { FooterBasic } from "@/components/headers/footer-simple"
+import { Toaster } from "@/components/ui/sonner"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,6 +51,7 @@ export default function RootLayout({
           {children}
           <FooterBasic />
         </ThemeProvider>
+        <Toaster />
       </body>
     </html>
   );
