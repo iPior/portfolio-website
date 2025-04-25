@@ -1,6 +1,6 @@
 import { Hero } from "@/components/sections/hero"
 import { Projects } from "@/components/sections/projects"
-import { AboutTwo } from "@/components/sections/about-two"
+import { AboutTwo } from "@/components/sections/about"
 import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 
 

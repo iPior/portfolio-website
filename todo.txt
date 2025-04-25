@@ -1,5 +1,2 @@
-Style ideas
-- load/fade on scroll? 
-
 To Do eventually
 - delete not used fonts and images

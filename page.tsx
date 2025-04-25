@@ -2,7 +2,7 @@
 import { Header } from "@/components/headers/header"
 import { Hero } from "@/components/sections/hero"
 import { Music } from "@/components/sections/music"
-import { AboutTwo } from "@/components/sections/about-two"
+import { AboutTwo } from "@/components/sections/about"
 import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 
 export default function Home() {

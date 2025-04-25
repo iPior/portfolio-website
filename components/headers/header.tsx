@@ -29,6 +29,9 @@ export function Header() {
             <Link href="/" className="text-sm font-medium hover:text-accent transition-colors">
               Home
             </Link>
+            <Link href="/dj" className="text-sm font-medium hover:text-accent transition-colors">
+              DJ
+            </Link>
             <Link href="/blogs" className="text-sm font-medium hover:text-accent transition-colors">
               Blogs
             </Link>
@@ -61,18 +64,18 @@ export function Header() {
             <div className="absolute bg-background container mx-auto top-16 left-0 right-0 border-b border-r border-l md:hidden">
               <nav className="flex text-xs sm:text-sm py-4 items-center justify-between px-8 font-medium">
                 <Link
-                  href="#about"
+                  href="/"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  About Me
+                  Home
                 </Link>
                 <Link
-                  href="#projects"
+                  href="/dj"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Projects
+                  DJ
                 </Link>
                 <Link
                   href="/blogs"
