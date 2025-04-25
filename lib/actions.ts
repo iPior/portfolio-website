@@ -22,7 +22,7 @@ export async function sendEmail(emailFormData: z.infer<typeof formSchema>) {
       return Response.json({ error }, { status: 500 });
     }
 
-    // return Response.json(data);
+    return Response.json(data);
   } catch (error) {
     return Response.json({ error }, { status: 500 });
   }

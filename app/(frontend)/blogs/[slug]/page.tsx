@@ -1,4 +1,4 @@
-import Image from "next/image"
+// import Image from "next/image"
 import { notFound } from "next/navigation"
 import { CalendarIcon, ClockIcon, UserIcon } from "lucide-react"
 
