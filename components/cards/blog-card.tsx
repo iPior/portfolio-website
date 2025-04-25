@@ -14,16 +14,6 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({className, slug, title, image, date, excerpt, readTime}:BlogCardProps){
-
-    const interests = [
-        "WebSocket requests",
-        "Optimizing web application performance", 
-        "Intermediate Next.js and TypeScript concepts",
-        "MongoDB, Prisma and Supabase",
-        "Tanstack Start, React Native and Electron",
-      ]
-
-
   return (
     <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50", className)}>
         <div className="flex flex-col gap-4 sm:flex-row">
