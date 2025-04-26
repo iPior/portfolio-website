@@ -6,7 +6,7 @@ import { SectionHeader } from "@/components/headers/section-header";
 import { FadeUp } from "@/components/animations/fade-up";
 import { FadeRight } from "../animations/fade-right";
 
-export function AboutTwo() {
+export function About() {
 
   return (
     <section id="about" className="scroll-mt-16">
