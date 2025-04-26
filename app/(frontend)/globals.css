@@ -38,6 +38,7 @@
   --container-xs:350px;
   --text-hero: 11rem;
   --text-hero--line-height: 1;
+  --text-dj-hero: 13rem;
 }
 
 :root {
@@ -99,12 +100,18 @@
 }
 
 @font-face {
-  font-family: 'ProximoNova';
+  font-family: 'CubaoWide';
   font-style: normal;
-  src: url('/fonts/proximo-nova.otf') format('truetype');
+  src: url('/fonts/Cubao_Free_Wide.otf') format('truetype');
 }
 
 @font-face {
+  font-family: 'CubaoNarrow';
+  font-style: normal;
+  src: url('/fonts/Cubao_Free_Narrow.otf') format('truetype');
+}
+
+/* @font-face {
   font-family: 'ArminGrotesk';
   font-style: normal;
   src: url('/fonts/Armin-Grotesk.ttf') format('truetype');
@@ -115,4 +122,4 @@
   font-weight: 400;
   font-style: normal;
   src: url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
-}
+} */

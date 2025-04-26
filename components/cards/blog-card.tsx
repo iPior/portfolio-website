@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, ClockIcon } from "lucide-react"
 
@@ -18,12 +18,12 @@ export default function BlogCard({className, slug, title, image, date, excerpt, 
     <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50", className)}>
         <div className="flex flex-col gap-4 sm:flex-row">
         <div className="relative h-48 w-full sm:w-48 rounded-md overflow-hidden border">
-            <Image
+            {/* <Image
                 src={image || "/placeholder.svg"}
                 alt={title}
                 fill
                 className="object-cover transition-transform group-hover:scale-105"
-            />
+            /> */}
         </div>
         <div className="flex-1 space-y-4">
             <div className="space-y-2">

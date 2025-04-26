@@ -54,74 +54,66 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <div className="space-y-2">
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Name</FormLabel>
-                <FormControl>
-                    <Input placeholder="shadcn" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-          )}
-          />
-        </div>
-        
-        <div className="space-y-2">
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email Address</FormLabel>
-                <FormControl>
-                    <Input placeholder="shadcn" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 p-4 flex flex-col justify-between">
+
+        <div className="grid gap-4 sm:grid-cols-2">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem className="">
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                      <Input placeholder="Your Name" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
             )}
-          />
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem className="">
+                  <FormLabel>Email Address</FormLabel>
+                  <FormControl>
+                      <Input placeholder="your@email.com" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
         </div>
 
-        <div className="space-y-2">
           <FormField
             control={form.control}
             name="subject"
             render={({ field }) => (
-              <FormItem>
+              <FormItem className="">
                 <FormLabel>Subject</FormLabel>
                 <FormControl>
-                    <Input placeholder="shadcn" {...field} />
+                    <Input placeholder="Event in a Few Weeks" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-        </div>
-
-        <div className="space-y-2">
           <FormField
             control={form.control}
             name="message"
             render={({ field }) => (
-              <FormItem>
+              <FormItem className="">
                 <FormLabel>Message</FormLabel>
                 <FormControl>
-                    <Textarea id="message" placeholder="Your message here..." className="min-h-[150px]" {...field} />
+                    <Textarea id="message" placeholder="Your message here..." className="min-h-[200px]" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-        </div>
-
-        <Button type="submit" className="w-full sm:w-auto" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send Message"}
-        </Button>
+          <Button type="submit" className="w-full sm:w-36 p-2" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send Message"}
+          </Button>
       </form>
     </Form>
   )
