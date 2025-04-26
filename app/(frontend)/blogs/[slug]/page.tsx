@@ -51,7 +51,7 @@ async function getBlogPost(slug: string) {
   return posts[slug] || null
 }
 
-export default async function BlogPost({ params }: { params: { slug: string } }) {
+export default async function BlogPost(params: { slug: string }) {
   const post = await getBlogPost(params.slug)
 
   if (!post) {
