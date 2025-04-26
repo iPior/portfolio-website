@@ -47,6 +47,7 @@ export function ContactForm() {
       reset()
     } catch (error) {
       toast("Something went wrong.")
+      console.error("Error sending email:", error)
     } finally {
       setIsSubmitting(false)
     }

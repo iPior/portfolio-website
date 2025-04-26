@@ -13,7 +13,7 @@ interface BlogCardProps {
   readTime?: string;
 }
 
-export default function BlogCard({className, slug, title, image, date, excerpt, readTime}:BlogCardProps){
+export default function BlogCard({className, slug, title, date, excerpt, readTime}:BlogCardProps){
   return (
     <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50", className)}>
         <div className="flex flex-col gap-4 sm:flex-row">
