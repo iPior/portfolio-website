@@ -29,11 +29,11 @@ export function Header() {
             <Link href="/" className="text-sm font-medium hover:text-accent transition-colors">
               Home
             </Link>
-            <Link href="/dj" className="text-sm font-medium hover:text-accent transition-colors">
-              DJ
-            </Link>
             <Link href="/blogs" className="text-sm font-medium hover:text-accent transition-colors">
               Blogs
+            </Link>
+            <Link href="/dj" className="text-sm font-medium hover:text-accent transition-colors">
+              DJ
             </Link>
             <div className="flex items-center gap-3">
               <Button variant="outline" size="icon" asChild className="h-9 w-9">

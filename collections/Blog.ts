@@ -12,9 +12,9 @@ export const Blog: CollectionConfig = {
       required: true,
     },
     {
-      name: 'author',
+      name: 'slug',
       type: 'text',
-      required: false,
+      required: true,
     },
     {
       name: 'date',
@@ -22,9 +22,25 @@ export const Blog: CollectionConfig = {
       required: true,
     },
     {
+      name: 'author',
+      type: 'text',
+      required: false,
+    },
+    {
       name: 'read-time',
       type: 'text',
       required: false,
+    },
+    {
+      name: 'image',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+    },
+    {
+      name: 'description',
+      type: 'text',
+      required: true,
     },
     {
       name: 'content',
@@ -32,5 +48,4 @@ export const Blog: CollectionConfig = {
       required: true,
     },
   ],
-  upload: true,
 }

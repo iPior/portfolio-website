@@ -12,8 +12,8 @@ export function DjHero() {
 
               <div className="h-full w-full relative">
                 <Image 
-                  width={1200}
-                  height={1200}
+                  width={800}
+                  height={800}
                   src="/images/dj-logo-2.svg"
                   alt="DJ Pior"
                   className=""

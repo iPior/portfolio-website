@@ -1,29 +1,33 @@
+"use client"
+
 import { cn } from "@/lib/utils";
-// import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, ClockIcon } from "lucide-react"
+
+import type { Media } from "@/payload-types";
 
 interface BlogCardProps {
   className?: string;
   slug: string;
   title: string;
-  image?: string;
+  image: Media;
   date: string;
-  excerpt: string;
-  readTime?: string;
+  description: string;
+  readTime?: string | null;
 }
 
-export default function BlogCard({className, slug, title, date, excerpt, readTime}:BlogCardProps){
+export default function BlogCard({className, slug, image, title, date, description, readTime}:BlogCardProps){
   return (
     <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50", className)}>
         <div className="flex flex-col gap-4 sm:flex-row">
         <div className="relative h-48 w-full sm:w-48 rounded-md overflow-hidden border">
-            {/* <Image
-                src={image || "/placeholder.svg"}
-                alt={title}
+            <Image
+                src={image.url || "/placeholder-image.svg"}
+                alt={image.alt}
                 fill
-                className="object-cover transition-transform group-hover:scale-105"
-            /> */}
+                // className="object-cover transition-transform group-hover:scale-105"
+            />
         </div>
         <div className="flex-1 space-y-4">
             <div className="space-y-2">
@@ -49,7 +53,9 @@ export default function BlogCard({className, slug, title, date, excerpt, readTim
                 </div>
             </div>
             </div>
-            <p className="text-muted-foreground">{excerpt}</p>
+            <p className="text-muted-foreground">
+                {description}
+            </p>
             <div>
             <Link
                 href={`/blogs/${slug}`}
