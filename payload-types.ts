@@ -162,7 +162,7 @@ export interface Blog {
   date: string;
   author?: string | null;
   'read-time'?: string | null;
-  image: number | Media;
+  image: Media;
   description: string;
   content: {
     root: {

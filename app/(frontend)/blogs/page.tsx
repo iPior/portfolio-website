@@ -6,6 +6,7 @@ import BlogCard from "@/components/cards/blog-card"
 import type { Payload } from "payload"
 import { getPayload } from 'payload'
 import config from '@payload-config'
+import { Blog } from "@/payload-types"
 
 export default async function BlogPage() {
   const payload = await getPayload({ config })
@@ -29,14 +30,14 @@ export default async function BlogPage() {
           <SectionHeader className="mb-4" header="Blog Posts" />
           <BorderWrapper className="mt-2 md:mt-4">
             <div className="grid gap-8 p-4">
-              {posts.map((post) => (
+              {posts.map((post: Blog) => (
                 <BlogCard
                   key={post.id}
                   slug={post.slug}
                   title={post.title}
                   date={post.date}
                   description={post.description}
-                  image={post.image?.url}
+                  image={post.image}
                   readTime={post["read-time"] || null}
                 />
                 

@@ -5,28 +5,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, ClockIcon } from "lucide-react"
 
-import type { Media } from "@/payload-types";
+// import { Blog } from "@/collections/Blog";
+// import type { BlogCardProps } from "@/lib/types";
+import { Blog, Media } from "@/payload-types";
 
 interface BlogCardProps {
-  className?: string;
-  slug: string;
-  title: string;
-  image: Media;
-  date: string;
-  description: string;
-  readTime?: string | null;
+    key: number | string;
+    slug: string;
+    title: string;
+    date: string;
+    description: string;
+    image: Media | string | number | null; // for Payload media
+    readTime: string | null;
+    className?: string;
 }
 
-export default function BlogCard({className, slug, image, title, date, description, readTime}:BlogCardProps){
+export default function BlogCard({key, slug, title, date, description, image, readTime, className}: BlogCardProps){
+
   return (
-    <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50", className)}>
+    <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50", className) }>
         <div className="flex flex-col gap-4 sm:flex-row">
         <div className="relative h-48 w-full sm:w-48 rounded-md overflow-hidden border">
             <Image
-                src={image.url || "/placeholder-image.svg"}
-                alt={image.alt}
+                src={image && typeof image === "object" && "url" in image ? image.url ?? "/placeholder-image.jpg" : "/placeholder-image.jpg"}
+                alt={image && typeof image === "object" && "alt" in image ? image.alt || "Blog post image" : "Blog post image"}
                 fill
-                // className="object-cover transition-transform group-hover:scale-105"
+                className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
             />
         </div>
         <div className="flex-1 space-y-4">
