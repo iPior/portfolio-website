@@ -38,9 +38,6 @@ export function ContactForm() {
 
   async function onSubmit(data: FormValues) {
     setIsSubmitting(true)
-
-    console.log("Form Data:", data);
-
     try {
       await sendEmail(data)
       toast("Message sent!")

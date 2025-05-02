@@ -19,7 +19,7 @@ interface BlogCardProps {
 export default function BlogCard({slug, title, date, description, image, readTime, className}: BlogCardProps){
 
   return (
-    <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50 shadow-sm", className) }>
+    <article key={slug} className={cn("group bg-card relative rounded-lg border p-6 hover:bg-muted/90 shadow-sm", className) }>
         <div className="flex flex-col gap-4 sm:flex-row">
         <div className="relative h-48 w-full sm:w-48 rounded-md overflow-hidden border">
             <Image

@@ -1,6 +1,7 @@
 // storage-adapter-import-placeholder
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
+import { resendAdapter } from '@payloadcms/email-resend'
 
 import path from 'path'
 import { buildConfig } from 'payload'
@@ -19,6 +20,7 @@ import {
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Blog } from './collections/Blog'
+import { Mix } from './collections/Mix'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -30,7 +32,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Blog],
+  collections: [Users, Media, Blog, Mix],
   editor: lexicalEditor({
     features({ defaultFeatures }) {
       return [
@@ -85,4 +87,9 @@ export default buildConfig({
       token: process.env.BLOB_READ_WRITE_TOKEN,
     }),
   ],
+  email: resendAdapter({
+    defaultFromAddress: 'szaranpiotr@gmail.com',
+    defaultFromName: 'DJ Pior',
+    apiKey: process.env.RESEND_API_KEY || '',
+  })
 })

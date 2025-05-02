@@ -49,8 +49,8 @@ export default function SkillCard({className}:SkillCardProps){
       ];
 
   return (
-    <Card className={cn("h-full bg-transparent md:bg-card border-0 md:border p-0 md:py-6 shadow-none md:shadow-sm", className)}>
-        <CardContent className="p-4 md:p-6">
+    <Card className={cn("h-full bg-transparent md:bg-card md:hover:bg-muted/90 border-0 md:border p-0 md:py-6 shadow-none md:shadow-sm group", className)}>
+        <CardContent className="p-4 md:p-6 group-hover:scale-105 transition-transform duration-200 ease-in-out">
             <div className="flex items-center gap-2 mb-4 border-t md:border-t-0 pt-6 md:pt-0">
                 <Code className="h-5 w-5 text-primary" />
                 <h3 className="text-xl md:text-2xl font-bold">Skills</h3>

@@ -1,5 +1,6 @@
 import { BorderWrapper } from "@/components/wrappers/border-wrapper"
 import { FadeRight } from "@/components/animations/fade-right"
+import { FadeUp } from "@/components/animations/fade-up"
 import { SectionHeader } from "@/components/headers/section-header"
 import { ContactForm } from "@/components/contact-form"
 
@@ -11,7 +12,9 @@ export function DjContact() {
                 <SectionHeader header="Book me as a DJ"/>
             </FadeRight>
             <BorderWrapper className="mt-2 md:mt-4">
+              <FadeUp>
                 <ContactForm />
+              </FadeUp>
             </BorderWrapper>
         </BorderWrapper>
       </section>

@@ -16,19 +16,19 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ image, title, description, tags, liveUrl, githubUrl  }:ProjectCardProps){
   return (
-    <Card className=" md:h-150 pt-0 ">
+    <Card className=" md:h-150 pt-0 group hover:bg-muted/90">
         <Image
             src={image}
             alt={title}
             width={600}
             height={400}
-            className="h-60 md:h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-xl"
+            className="h-60 md:h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-xl "
         />
 
-        <CardContent className="md:h-1/2 px-4 flex flex-col justify-between ">
+        <CardContent className="md:h-1/2 px-4 flex flex-col justify-between">
             
             <div>
-                <h3 className="text-xl md:text-2xl font-bold mb-2">{title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-2 group-hover:scale-110 group-hover:translate-x-5 transition-transform duration-200 ease-in-out">{title}</h3>
                 <p className="mb-4 text-foreground/70 ">{description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                     {tags?.map((tag) => (
@@ -39,7 +39,7 @@ export default function ProjectCard({ image, title, description, tags, liveUrl, 
                 </div>
             </div>
 
-            <div className="flex gap-4">
+            <div className="flex gap-2">
                 <Button variant="default" size="sm" asChild>
                 <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4 mr-2" />

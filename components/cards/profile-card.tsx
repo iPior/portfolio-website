@@ -18,13 +18,13 @@ export default function ProfileCard({className}:ProjectCardProps){
     ]
 
   return (
-    <Card className={cn("h-full bg-transparent md:bg-card border-0 md:border p-0 md:py-6 shadow-none md:shadow-sm", className)}>
+    <Card className={cn("h-full bg-transparent md:bg-card md:hover:bg-muted/90 border-0 md:border p-0 md:py-6 shadow-none md:shadow-sm group", className)}>
         <CardContent className="p-2 md:p-6 flex flex-col justify-between md:items-center space-y-4">
         {/* <h3 className="text-4xl font-bold mb-4 md:block hidden">Piotr Szaran</h3> */}
-        <div className="relative w-68 h-68 md:w-58 md:h-58 rounded-3xl overflow-hidden border shadow-2xl mb-4">
+        <div className="relative w-68 h-68 md:w-58 md:h-58 rounded-3xl overflow-hidden border shadow-2xl mb-4 group-hover:scale-105 transition-transform duration-200 ease-in-out">
             <Image src="/images/headshot.jpg" alt="Profile" fill className="object-cover" />
         </div>
-        <h3 className="text-xl md:text-2xl font-bold mb-2">Piotr Szaran</h3>
+        <h3 className="text-xl md:text-2xl font-bold mb-2 group-hover:scale-110 transition-transform duration-200 ease-in-out">Piotr Szaran</h3>
 
         <div className="flex flex-wrap md:justify-center gap-2 w-4/5 md:w-2/3">
             {badgeFacts.map((fact, index) => (
@@ -36,12 +36,12 @@ export default function ProfileCard({className}:ProjectCardProps){
         </div>
         <div>
 
-        <Button className="mr-2 text-md md:text-lg">
+        <Button className="mr-2 text-md md:text-lg group-hover:scale-105 group-hover:translate-x-[-1] transition-transform duration-200 ease-in-out">
             <a href="mailto:szaranpiotr@gmail.com" target="_blank" rel="noopener noreferrer">
             Contact Me
             </a>
         </Button>
-        <Button className="text-md md:text-lg">
+        <Button className="text-md md:text-lg group-hover:scale-105 group-hover:translate-x-1 transition-transform duration-200 ease-in-out">
             <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             Resume
             </a>
