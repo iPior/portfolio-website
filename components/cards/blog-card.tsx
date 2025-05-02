@@ -7,7 +7,6 @@ import { CalendarIcon, ClockIcon } from "lucide-react"
 import { Media } from "@/payload-types";
 
 interface BlogCardProps {
-    key: number | string;
     slug: string;
     title: string;
     date: string;
@@ -17,7 +16,7 @@ interface BlogCardProps {
     className?: string;
 }
 
-export default function BlogCard({key, slug, title, date, description, image, readTime, className}: BlogCardProps){
+export default function BlogCard({slug, title, date, description, image, readTime, className}: BlogCardProps){
 
   return (
     <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50 shadow-sm", className) }>
