@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
@@ -91,6 +92,7 @@
 }
 
 @layer base {
+
   * {
     @apply border-border outline-ring/50;
   }
@@ -110,16 +112,3 @@
   font-style: normal;
   src: url('/fonts/Cubao_Free_Narrow.otf') format('truetype');
 }
-
-/* @font-face {
-  font-family: 'ArminGrotesk';
-  font-style: normal;
-  src: url('/fonts/Armin-Grotesk.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: "Boldonse", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  src: url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
-} */

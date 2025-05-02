@@ -4,10 +4,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { CalendarIcon, ClockIcon } from "lucide-react"
-
-// import { Blog } from "@/collections/Blog";
-// import type { BlogCardProps } from "@/lib/types";
-import { Blog, Media } from "@/payload-types";
+import { Media } from "@/payload-types";
 
 interface BlogCardProps {
     key: number | string;
@@ -23,7 +20,7 @@ interface BlogCardProps {
 export default function BlogCard({key, slug, title, date, description, image, readTime, className}: BlogCardProps){
 
   return (
-    <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50", className) }>
+    <article key={slug} className={cn("group relative rounded-lg border p-6 hover:bg-muted/50 shadow-sm", className) }>
         <div className="flex flex-col gap-4 sm:flex-row">
         <div className="relative h-48 w-full sm:w-48 rounded-md overflow-hidden border">
             <Image

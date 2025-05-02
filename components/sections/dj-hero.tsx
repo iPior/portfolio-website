@@ -16,7 +16,7 @@ export function DjHero() {
                   height={800}
                   src="/images/dj-logo-2.svg"
                   alt="DJ Pior"
-                  className=""
+                  className="filter invert dark:invert-0"
                   />
               </div>
               {/* <div className="py-4">

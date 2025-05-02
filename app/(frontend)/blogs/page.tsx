@@ -21,7 +21,6 @@ export default async function BlogPage() {
   }
 
   const posts = await getPayloadPosts(payload)
-  console.log(posts)
 
   return (
     <main className="">

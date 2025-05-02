@@ -2,11 +2,19 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 
-import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
+
+import {
+  BoldFeature,
+  ItalicFeature,
+  LinkFeature,
+  ParagraphFeature,
+  lexicalEditor,
+  UnderlineFeature,
+} from '@payloadcms/richtext-lexical'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -23,7 +31,41 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Blog],
-  editor: lexicalEditor({}),
+  editor: lexicalEditor({
+    features({ defaultFeatures }) {
+      return [
+        ...defaultFeatures,
+      ]
+    },
+    // features: [
+    //   ParagraphFeature(),
+    //   UnderlineFeature(),
+    //   BoldFeature(),
+    //   ItalicFeature(),
+    //   LinkFeature({
+    //     enabledCollections: ['blog'],
+    //     fields: ({ defaultFields }) => {
+    //       const defaultFieldsWithoutUrl = defaultFields.filter((field) => {
+    //         if ('name' in field && field.name === 'url') return false
+    //         return true
+    //       })
+
+    //       return [
+    //         ...defaultFieldsWithoutUrl,
+    //         {
+    //           name: 'url',
+    //           type: 'text',
+    //           admin: {
+    //             condition: (_data, siblingData) => siblingData?.linkType !== 'internal',
+    //           },
+    //           label: ({ t }) => t('fields:enterURL'),
+    //           required: true,
+    //         },
+    //       ]
+    //     },
+    //   }),
+    // ],
+  }),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
