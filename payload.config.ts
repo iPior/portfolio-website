@@ -87,7 +87,7 @@ export default buildConfig({
     }),
   ],
   email: resendAdapter({
-    defaultFromAddress: 'szaranpiotr@gmail.com',
+    defaultFromAddress: 'send@piotrszaran.com',
     defaultFromName: 'DJ Pior',
     apiKey: process.env.RESEND_API_KEY || '',
   })

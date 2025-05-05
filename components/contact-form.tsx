@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { sendEmailPayload } from "@/lib/actions"
 
 import { toast } from "sonner"
 import { formSchema } from "@/lib/schemas"
@@ -38,13 +39,7 @@ export function ContactForm() {
   async function onSubmit(data: FormValues) {
     setIsSubmitting(true)
     try {
-      await fetch("/api/email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      await sendEmailPayload(data)
       toast("Message sent!")
       reset()
     } catch (error) {

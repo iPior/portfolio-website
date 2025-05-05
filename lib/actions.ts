@@ -1,26 +1,23 @@
 "use server";
 
+import { DjEmailTemplate } from "@/components/email-template";
 import { z } from "zod";
-import { formSchema } from "@/lib/schemas";
+import { formSchema } from "./schemas";
 
-export async function sendEmail(emailFormData: z.infer<typeof formSchema>) {
+import { getPayload } from 'payload';
+import configPromise from '@payload-config';
+
+export async function sendEmailPayload(emailFormData: z.infer<typeof formSchema>) {
+  const payload = await getPayload({ config: configPromise });
+
   try {
-    const response = await fetch("/api/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(emailFormData),
+    await payload.sendEmail({
+      to: 'szaranpiotr@gmail.com',
+      subject: emailFormData.subject,
+      html: `<h1>DJ Contact Form <${emailFormData.email}></h1><p>${emailFormData.message}</p>`, // You can customize this or use a template
     });
 
-    if (!response.ok) {
-      const error = await response.json();
-      return Response.json({ error }, { status: response.status });
-    }
-
-    const data = await response.json();
-    return Response.json(data);
   } catch (error) {
-    return Response.json({ error }, { status: 500 });
+    throw error;
   }
 }
