@@ -80,7 +80,6 @@ export default buildConfig({
   sharp,
   plugins: [
     vercelBlobStorage({
-      // Specify which collections should use Vercel Blob
       collections: {
         media: true,
       },

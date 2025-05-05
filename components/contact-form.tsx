@@ -6,7 +6,6 @@ import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 
 import { toast } from "sonner"
-import { sendEmail } from "@/lib/actions"
 import { formSchema } from "@/lib/schemas"
 
 import { Button } from "@/components/ui/button"
@@ -39,7 +38,13 @@ export function ContactForm() {
   async function onSubmit(data: FormValues) {
     setIsSubmitting(true)
     try {
-      await sendEmail(data)
+      await fetch("/api/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
       toast("Message sent!")
       reset()
     } catch (error) {
@@ -62,7 +67,7 @@ export function ContactForm() {
                 <FormItem className="">
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                      <Input placeholder="Your Name" {...field} />
+                      <Input placeholder="Your Name" {...field} className="bg-background" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -75,7 +80,7 @@ export function ContactForm() {
                 <FormItem className="">
                   <FormLabel>Email Address</FormLabel>
                   <FormControl>
-                      <Input placeholder="your@email.com" {...field} />
+                      <Input placeholder="your@email.com" {...field} className="bg-background" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -90,7 +95,7 @@ export function ContactForm() {
               <FormItem className="">
                 <FormLabel>Subject</FormLabel>
                 <FormControl>
-                    <Input placeholder="Event in a Few Weeks" {...field} />
+                    <Input placeholder="Event in a Few Weeks" {...field} className="bg-background"/>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -103,7 +108,7 @@ export function ContactForm() {
               <FormItem className="">
                 <FormLabel>Message</FormLabel>
                 <FormControl>
-                    <Textarea id="message" placeholder="Your message here..." className="min-h-[200px]" {...field} />
+                    <Textarea id="message" placeholder="Your message here..." className="min-h-[200px] bg-background" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
