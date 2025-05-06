@@ -1,6 +1,6 @@
-import MusicCard from "@/components/cards/music-card"
+import MusicCard from "@/components/cards/mix-card"
 import { BorderWrapper } from "@/components/wrappers/border-wrapper";
-import { SectionHeader } from "@/components/headers/section-header";
+// import { SectionHeader } from "@/components/headers/section-header";
 
 import type { Payload } from "payload"
 import { getPayload } from 'payload'
@@ -74,25 +74,15 @@ export async function Music() {
 
   return (
     <section id="music" className="">
-      {/* <SectionHeader header="My DJ Mixes"/> */}
-      <BorderWrapper className="mt-4">
-        <div className="container grid grid-cols-4 gap-4 p-2 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 dark:[--pattern-fg:var(--color-white)]/10">
+      {/* <SectionHeader header="Mixes"/> */}
+      <BorderWrapper className="mt-4 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 dark:[--pattern-fg:var(--color-white)]/10">
+        <div className="container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 ">
           {
             mixes.map((mix: Mix, index) => (
               <MusicCard key={index} title={mix.title} src={mix.src} description={mix.description}/>
             ))
           }
         </div>
-        
-        {/* <div className="container bg-foreground/5 p-8"> */}
-          {/* <div className="container grid grid-cols-2 gap-1  bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 dark:[--pattern-fg:var(--color-white)]/10">
-            {
-              mixes.map((mix, index) => (
-                <MusicCard key={index} title={mix.title} src={mix.src} description={mix.description}/>
-              ))
-            }
-          </div> */}
-        {/* </div> */}
       </BorderWrapper>
     </section>
   )

@@ -23,7 +23,7 @@ export default async function BlogPage() {
   const posts = await getPayloadPosts(payload)
 
   return (
-    <main className="">
+    <main className="h-full">
       <PatternWrapper>
         <div className="h-full px-4 mt-18">
           <SectionHeader className="mb-4" header="Blog Posts" />

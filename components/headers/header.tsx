@@ -32,7 +32,7 @@ export function Header() {
             <Link href="/blogs" className="text-sm font-medium hover:text-accent transition-colors">
               Blogs
             </Link>
-            <Link href="/dj" className="text-sm font-medium hover:text-accent transition-colors">
+            <Link href="/music" className="text-sm font-medium hover:text-accent transition-colors">
               Music
             </Link>
             <div className="flex items-center gap-3">

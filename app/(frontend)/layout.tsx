@@ -39,7 +39,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Piotr Szaran" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-gradient-to-t dark:bg-gradient-to-b from-blue-50 dark:from-gray-100/5 to-background`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden bg-gradient-to-t dark:bg-gradient-to-b from-blue-50 dark:from-gray-100/5 to-background h-full`}
       >
         <ThemeProvider
           attribute="class"

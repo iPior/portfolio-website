@@ -20,6 +20,8 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "./ui/separator"
 
 type FormValues = z.infer<typeof formSchema>
 
@@ -52,67 +54,70 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 p-4 flex flex-col justify-between">
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="h-full space-y-4 p-4 flex flex-col justify-between bg-card border rounded-lg shadow-md hover:bg-muted/90">
+            <h1 className="text-4xl font-bold">Contact Me</h1>
+            <Separator className="mb-4" />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem className="">
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                        <Input placeholder="Your Name" {...field} className="bg-background" />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+              )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem className="">
+                    <FormLabel>Email Address</FormLabel>
+                    <FormControl>
+                        <Input placeholder="your@email.com" {...field} className="bg-background" />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+                />
+            </div>
+
             <FormField
               control={form.control}
-              name="name"
+              name="subject"
               render={({ field }) => (
                 <FormItem className="">
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Subject</FormLabel>
                   <FormControl>
-                      <Input placeholder="Your Name" {...field} className="bg-background" />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-            )}
-            />
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem className="">
-                  <FormLabel>Email Address</FormLabel>
-                  <FormControl>
-                      <Input placeholder="your@email.com" {...field} className="bg-background" />
+                      <Input placeholder="Event in a Few Weeks" {...field} className="bg-background"/>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
-            />
-        </div>
+              />
+            <FormField
+              control={form.control}
+              name="message"
+              render={({ field }) => (
+                <FormItem className="">
+                  <FormLabel>Message</FormLabel>
+                  <FormControl>
+                      <Textarea id="message" placeholder="Your message here..." className="min-h-[150px] bg-background" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+              />
+            <Button type="submit" className="w-full mt-2 p-2" disabled={isSubmitting}>
+                {isSubmitting ? "Sending..." : "Send Email"}
+            </Button>
+        </form>
 
-          <FormField
-            control={form.control}
-            name="subject"
-            render={({ field }) => (
-              <FormItem className="">
-                <FormLabel>Subject</FormLabel>
-                <FormControl>
-                    <Input placeholder="Event in a Few Weeks" {...field} className="bg-background"/>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => (
-              <FormItem className="">
-                <FormLabel>Message</FormLabel>
-                <FormControl>
-                    <Textarea id="message" placeholder="Your message here..." className="min-h-[200px] bg-background" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button type="submit" className="w-full sm:w-36 p-2" disabled={isSubmitting}>
-              {isSubmitting ? "Sending..." : "Send Message"}
-          </Button>
-      </form>
     </Form>
   )
 }
