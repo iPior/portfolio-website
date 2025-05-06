@@ -71,6 +71,7 @@ export interface Config {
     media: Media;
     blog: Blog;
     mix: Mix;
+    projects: Project;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -81,6 +82,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     blog: BlogSelect<false> | BlogSelect<true>;
     mix: MixSelect<false> | MixSelect<true>;
+    projects: ProjectsSelect<false> | ProjectsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -222,7 +224,7 @@ export interface Blog {
   date: string;
   author?: string | null;
   'read-time'?: string | null;
-  image: number | Media;
+  image: Media;
   description: string;
   content: {
     root: {
@@ -256,6 +258,22 @@ export interface Mix {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects".
+ */
+export interface Project {
+  id: number;
+  image: number | Media;
+  title: string;
+  description: string;
+  technologies: string;
+  slug: string;
+  liveDemo?: string | null;
+  sourceCode: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -276,6 +294,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'mix';
         value: number | Mix;
+      } | null)
+    | ({
+        relationTo: 'projects';
+        value: number | Project;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -450,6 +472,21 @@ export interface MixSelect<T extends boolean = true> {
   title?: T;
   description?: T;
   src?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects_select".
+ */
+export interface ProjectsSelect<T extends boolean = true> {
+  image?: T;
+  title?: T;
+  description?: T;
+  technologies?: T;
+  slug?: T;
+  liveDemo?: T;
+  sourceCode?: T;
   updatedAt?: T;
   createdAt?: T;
 }

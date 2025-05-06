@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
 import Link from "next/link"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, Newspaper } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
@@ -52,6 +52,12 @@ export default function ProjectCard({ image, title, description, tags, liveUrl, 
                     Live Demo
                 </Link>
                 </Button>}
+                <Button variant="default" size="sm" asChild>
+                <Link href={"/"} target="_blank" rel="noopener noreferrer">
+                    <Newspaper className="h-4 w-4 mr-2" />
+                    Read More
+                </Link>
+                </Button>
             </div>
         </CardContent>
     </Card>

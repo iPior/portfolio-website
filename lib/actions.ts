@@ -1,6 +1,6 @@
 "use server";
 
-import { DjEmailTemplate } from "@/components/email-template";
+// import { DjEmailTemplate } from "@/components/email-template";
 import { z } from "zod";
 import { formSchema } from "./schemas";
 
@@ -14,7 +14,7 @@ export async function sendEmailPayload(emailFormData: z.infer<typeof formSchema>
     await payload.sendEmail({
       to: 'szaranpiotr@gmail.com',
       subject: emailFormData.subject,
-      html: `<h1>DJ Contact Form <${emailFormData.email}></h1><p>${emailFormData.message}</p>`, // You can customize this or use a template
+      html: `<h1>Email from:<${emailFormData.email}></h1><p>${emailFormData.message}</p>`, // You can customize this or use a template
     });
 
   } catch (error) {

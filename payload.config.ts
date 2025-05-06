@@ -21,6 +21,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Blog } from './collections/Blog'
 import { Mix } from './collections/Mix'
+import { Project } from './collections/Project'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -32,7 +33,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Blog, Mix],
+  collections: [Users, Media, Blog, Mix, Project],
   editor: lexicalEditor({
     features({ defaultFeatures }) {
       return [

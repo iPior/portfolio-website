@@ -69,8 +69,8 @@ export default async function BlogPost({ params }: Args) {
                     </div>
                     <div className="relative aspect-video overflow-hidden rounded-lg border mb-8">
                         <Image 
-                          src={post.image?.url || "/placeholder.svg"} 
-                          alt={post.image?.alt || post.title} 
+                          src={post.image.url || "/placeholder.svg"} 
+                          alt={post.image.alt || post.title} 
                           fill 
                           className="object-cover" 
                           priority 
