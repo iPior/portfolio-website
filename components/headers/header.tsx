@@ -26,13 +26,13 @@ export function Header() {
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            <Link href="/" className="text-sm font-medium hover:text-accent transition-colors">
+            <Link href="/" className="text-sm font-bold hover:text-accent transition-colors">
               Home
             </Link>
-            <Link href="/blogs" className="text-sm font-medium hover:text-accent transition-colors">
+            <Link href="/blogs" className="text-sm font-bold hover:text-accent transition-colors">
               Blogs
             </Link>
-            <Link href="/music" className="text-sm font-medium hover:text-accent transition-colors">
+            <Link href="/music" className="text-sm font-bold hover:text-accent transition-colors">
               Music
             </Link>
             <div className="flex items-center gap-3">
