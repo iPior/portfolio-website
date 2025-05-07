@@ -20,14 +20,18 @@ export function MusicPremiumPackageCard() {
   const secondHalf = equipmentList.slice(Math.ceil(equipmentList.length / 2));
 
   return (
-    <Card className="pt-0 h-full hover:bg-muted/90">
-      <CardHeader className="pt-4 ">
-        <CardTitle className="flex justify-between items-center">
-          <div>
-            <span className="text-3xl font-bold">Premium Package - $400</span>
-            <span className="text-md text-muted-foreground"> minimum</span>
+    <Card className="pt-4 h-full hover:bg-muted/90 group">
+      <CardHeader className="@container">
+        <CardTitle className=" flex justify-between items-start @lg:items-center">
+          <div className="flex w-full flex-col @lg:flex-row @lg:items-center space-y-2">
+            <span className="text-3xl @lg:text-4xl font-bold">Premium Package</span>
+            <span className="text-3xl font-bold hidden @lg:block">&nbsp;-&nbsp;</span>
+            <div className="">
+              <span className="text-2xl @lg:text-3xl font-bold">$400</span>
+              <span className="text-md text-muted-foreground"> minimum</span>
+            </div>
           </div>
-          <Badge className="ml-2 p-1 bg-accent/60 text-foreground h-1/2">Best Value</Badge>
+          <Badge className="m-2 p-1 px-2 bg-accent/60 text-foreground h-1/2 group-hover:scale-115 transition-transform duration-300 ease-in-out ">Best Value</Badge>
         </CardTitle>
         <CardDescription>Ideal for larger events, $100 per additional hour.</CardDescription>
       </CardHeader>

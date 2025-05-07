@@ -106,7 +106,7 @@ export function ContactForm() {
                 <FormItem className="">
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                      <Textarea id="message" placeholder="Your message here..." className="min-h-[150px] bg-background" {...field} />
+                      <Textarea id="message" placeholder="Your message here..." className="min-h-[200px] md:min-h-[150px] bg-background" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

@@ -262,7 +262,7 @@ export interface Mix {
  */
 export interface Project {
   id: number;
-  image: number | Media;
+  image: Media;
   title: string;
   description: string;
   technologies: string;

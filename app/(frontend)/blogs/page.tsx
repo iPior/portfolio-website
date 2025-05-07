@@ -2,6 +2,7 @@ import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 import { BorderWrapper } from "@/components/wrappers/border-wrapper"
 import { SectionHeader } from "@/components/headers/section-header"
 import BlogCard from "@/components/cards/blog-card"
+import { FadeRight } from "@/components/animations/fade-right"
 
 import type { Payload } from "payload"
 import { getPayload } from 'payload'
@@ -23,12 +24,14 @@ export default async function BlogPage() {
   const posts = await getPayloadPosts(payload)
 
   return (
-    <main className="h-full">
+    <main>
       <PatternWrapper>
         <div className="h-full px-4 mt-18">
-          <SectionHeader className="mb-4" header="Blog Posts" />
+          <FadeRight>
+            <SectionHeader className="mb-4" header="Blog Posts" />
+          </FadeRight>
           <BorderWrapper className="mt-2 md:mt-4">
-            <div className="grid gap-8 p-4">
+            <div className="grid gap-4 p-4 h-full pb-20">
               {posts.map((post: Blog) => (
                 <BlogCard
                   key={post.id}

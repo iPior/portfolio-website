@@ -4,22 +4,26 @@ import Link from "next/link"
 import { ExternalLink, Github, Newspaper } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Media } from "@/payload-types";
 
 interface ProjectCardProps {
-  image: string;
+  image: Media | string | number | null; // for Payload media;
   title: string;
   description: string;
-  tags: Array<string>;
+  tags: string;
+  slug: string;
   liveUrl?: string;
   githubUrl: string;
 }
 
-export default function ProjectCard({ image, title, description, tags, liveUrl, githubUrl  }:ProjectCardProps){
-  return (
+export default function ProjectCard({ image, title, description, tags, slug, liveUrl, githubUrl  }:ProjectCardProps){
+    const parsedTags = tags.split(',').map((item) => item.trim().replace(/^"|"$/g, ''));
+
+    return (
     <Card className=" md:h-150 pt-0 group hover:bg-muted/90">
         <Image
-            src={image}
-            alt={title}
+            src={image && typeof image === 'object' && 'url' in image ? image.url || '/fallback-image.jpg' : '/fallback-image.jpg'}
+            alt={image && typeof image === "object" && "alt" in image ? image.alt || "Project image" : "Project image"}
             width={600}
             height={400}
             className="h-60 md:h-1/2 object-cover object-top overflow-hidden justify-start rounded-t-xl "
@@ -31,7 +35,7 @@ export default function ProjectCard({ image, title, description, tags, liveUrl, 
                 <h3 className="text-xl md:text-2xl font-bold mb-2 group-hover:scale-110 group-hover:translate-x-5 transition-transform duration-200 ease-in-out">{title}</h3>
                 <p className="mb-4 text-foreground/70 ">{description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                    {tags?.map((tag) => (
+                    {parsedTags?.map((tag) => (
                     <Badge key={tag} variant="outline" className="px-2 py-1 text-xs md:text-sm">
                         {tag}
                     </Badge>
@@ -39,7 +43,7 @@ export default function ProjectCard({ image, title, description, tags, liveUrl, 
                 </div>
             </div>
 
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
                 <Button variant="default" size="sm" asChild>
                 <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
                     <Github className="h-4 w-4 mr-2" />
@@ -53,7 +57,7 @@ export default function ProjectCard({ image, title, description, tags, liveUrl, 
                 </Link>
                 </Button>}
                 <Button variant="default" size="sm" asChild>
-                <Link href={"/"} target="_blank" rel="noopener noreferrer">
+                <Link href={`/blogs/${slug}`} target="_blank" rel="noopener noreferrer">
                     <Newspaper className="h-4 w-4 mr-2" />
                     Read More
                 </Link>

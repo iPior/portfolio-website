@@ -7,7 +7,7 @@ import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 export default async function HomePage() {
 
   return (
-    <main className="min-h-screen">
+    <main className="h-min-screen">
         <PatternWrapper>
             <Hero />
             <About />

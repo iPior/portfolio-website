@@ -71,18 +71,18 @@ export function Header() {
                   Home
                 </Link>
                 <Link
-                  href="/dj"
-                  className="hover:text-primary transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  DJ
-                </Link>
-                <Link
                   href="/blogs"
                   className="hover:text-primary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Skills
+                  Blogs
+                </Link>
+                <Link
+                  href="/music"
+                  className="hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Music
                 </Link>
                 <Link
                   href="#https://linkedin.com/in/piotrszaran/"

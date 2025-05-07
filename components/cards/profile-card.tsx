@@ -24,7 +24,7 @@ export default function ProfileCard({className}:ProjectCardProps){
         <div className="relative w-68 h-68 md:w-58 md:h-58 rounded-3xl overflow-hidden border shadow-2xl mb-4 group-hover:scale-105 transition-transform duration-200 ease-in-out">
             <Image src="/images/headshot.jpg" alt="Profile" fill className="object-cover" />
         </div>
-        <h3 className="text-xl md:text-2xl font-bold mb-2 group-hover:scale-110 transition-transform duration-200 ease-in-out">Piotr Szaran</h3>
+        <h3 className="text-xl md:text-3xl font-bold mb-2 group-hover:scale-110 transition-transform duration-200 ease-in-out">Piotr Szaran</h3>
 
         <div className="flex flex-wrap md:justify-center gap-2 w-4/5 md:w-2/3">
             {badgeFacts.map((fact, index) => (

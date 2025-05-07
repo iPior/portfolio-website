@@ -15,11 +15,17 @@ export function MusicStandardPackageCard() {
   const secondHalf = equipmentList.slice(Math.ceil(equipmentList.length / 2));
 
   return (
-    <Card className="h-full pt-4 hover:bg-muted/90">
-      <CardHeader className="">
+    <Card className="pt-4 h-full hover:bg-muted/90">
+      <CardHeader className="@container">
         <CardTitle className="">
-          <span className="text-3xl font-bold">Standard Package - $200</span>
-          <span className="text-md text-muted-foreground"> minimum</span>
+          <div className="flex w-full flex-col @lg:flex-row @lg:items-center space-y-2">
+            <span className="text-3xl @lg:text-4xl font-bold">Standard Package</span>
+            <span className="text-3xl font-bold hidden @lg:block">&nbsp;-&nbsp;</span>
+            <div className="">
+              <span className="text-2xl @lg:text-3xl font-bold">$200</span>
+              <span className="text-md text-muted-foreground"> minimum</span>
+            </div>
+          </div>
         </CardTitle>
         <CardDescription>Perfect for small to medium gatherings, $100 per additional hour.</CardDescription>
       </CardHeader>
