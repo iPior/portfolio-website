@@ -1,6 +1,7 @@
 import Image from "next/image"
+import Link from "next/link";
 import { notFound } from "next/navigation"
-import { CalendarIcon, ClockIcon, UserIcon } from "lucide-react"
+import { CalendarIcon, ClockIcon, UserIcon, ArrowLeft } from "lucide-react"
 import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 import { BorderWrapper } from "@/components/wrappers/border-wrapper"
 
@@ -33,6 +34,7 @@ const queryPostBySlug = async ({ slug }: { slug: string }) => {
 export default async function BlogPost({ params }: Args) {
   const { slug = '' } = await params
   const post = await queryPostBySlug({ slug })
+
   if (!post) {
     notFound()
   }
@@ -77,6 +79,15 @@ export default async function BlogPost({ params }: Args) {
                         />
                     </div>
                     <RichText data={post.content} enableGutter={false} />
+                    {/* Return to Blogs Link */}
+                    <div className="">
+                      <Link
+                        href="/blogs"
+                        className="text-foreground/70 text-sm flex items-center mt-8 hover:text-accent"
+                      >
+                        <ArrowLeft className="h-4 w-4 mr-1" /><span className="font-bold">Return to Blogs </span>
+                      </Link>
+                    </div>
                   </BorderWrapper>
               </div>
             </div>

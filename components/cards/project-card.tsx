@@ -12,7 +12,7 @@ interface ProjectCardProps {
   description: string;
   tags: string;
   slug: string;
-  liveUrl?: string;
+  liveUrl?: string | null;
   githubUrl: string;
 }
 
@@ -46,19 +46,19 @@ export default function ProjectCard({ image, title, description, tags, slug, liv
             <div className="flex flex-wrap gap-2">
                 <Button variant="default" size="sm" asChild>
                 <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="h-4 w-4 mr-2" />
+                    <Github className="h-4 w-4" />
                     Source Code
                 </Link>
                 </Button>
                 {liveUrl &&   <Button variant="default" size="sm" asChild>
                 <Link href={liveUrl} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="h-4 w-4 mr-2" />
+                    <ExternalLink className="h-4 w-4" />
                     Live Demo
                 </Link>
                 </Button>}
                 <Button variant="default" size="sm" asChild>
                 <Link href={`/blogs/${slug}`} target="_blank" rel="noopener noreferrer">
-                    <Newspaper className="h-4 w-4 mr-2" />
+                    <Newspaper className="h-4 w-4" />
                     Read More
                 </Link>
                 </Button>
