@@ -224,7 +224,7 @@ export interface Blog {
   date: string;
   author?: string | null;
   'read-time'?: string | null;
-  image: Media;
+  image: number | Media;
   description: string;
   content: {
     root: {
@@ -262,7 +262,7 @@ export interface Mix {
  */
 export interface Project {
   id: number;
-  image: Media;
+  image: number | Media;
   title: string;
   description: string;
   technologies: string;
