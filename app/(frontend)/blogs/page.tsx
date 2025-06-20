@@ -31,7 +31,7 @@ export default async function BlogPage() {
             <SectionHeader className="mb-4" header="Blog Posts" />
           </FadeRight>
           <BorderWrapper className="mt-2 md:mt-4">
-            <div className="grid gap-4 p-4 h-full pb-20">
+            <div className="grid gap-4 p-4 h-full">
               {posts.map((post: Blog) => (
                 <BlogCard
                   key={post.id}

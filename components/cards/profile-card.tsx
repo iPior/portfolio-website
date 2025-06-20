@@ -13,7 +13,7 @@ export default function ProfileCard({className}:ProjectCardProps){
 
     const badgeFacts = [
         { icon: <Code className="h-4 w-4" />, label: "Web Developer" },
-        { icon: <Clock className="h-4 w-4" />, label: "1 Year of Experience" },
+        { icon: <Clock className="h-4 w-4" />, label: "1+ Year of Experience" },
         { icon: <MapPin className="h-4 w-4" />, label: "Toronto" },
     ]
 
