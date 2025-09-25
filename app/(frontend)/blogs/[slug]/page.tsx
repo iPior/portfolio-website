@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { CalendarIcon, ClockIcon, UserIcon, ArrowLeft } from "lucide-react"
 import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 import { BorderWrapper } from "@/components/wrappers/border-wrapper"
+import type { Metadata } from "next";
 
 import RichText from '@/components/sanity/rich-text'
 import { getPayload } from 'payload'
@@ -30,6 +31,49 @@ const queryPostBySlug = async ({ slug }: { slug: string }) => {
   return result.docs?.[0] || null
 }
 
+export async function generateMetadata({ params }: Args): Promise<Metadata> {
+  const { slug = '' } = await params
+  const post = await queryPostBySlug({ slug })
+
+  if (!post) {
+    return {
+      title: 'Blog Post Not Found | Piotr Szaran',
+      description: 'The requested blog post could not be found.',
+    }
+  }
+
+  const publishedDate = new Date(post.date).toISOString()
+  const imageUrl = post.image && typeof post.image === 'object' && 'url' in post.image 
+    ? post.image.url 
+    : 'https://www.piotrszaran.com/images/og-image.png'
+
+  return {
+    title: `${post.title} | Piotr Szaran - Blog`,
+    description: post.description || `Read ${post.title} by Piotr Szaran. ${post['read-time'] ? `Estimated read time: ${post['read-time']}` : ''}`,
+    keywords: [
+      'blog',
+      'Piotr Szaran',
+      post.title,
+      ...(post.description ? post.description.split(' ').slice(0, 5) : [])
+    ],
+    authors: [{ name: post.author || 'Piotr Szaran' }],
+    openGraph: {
+      title: post.title,
+      description: post.description || `Read ${post.title} by Piotr Szaran`,
+      type: 'article',
+      publishedTime: publishedDate,
+      authors: [post.author || 'Piotr Szaran'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description || `Read ${post.title} by Piotr Szaran`,
+    },
+    alternates: {
+      canonical: `https://www.piotrszaran.com/blogs/${post.slug}`,
+    },
+  }
+}
 
 export default async function BlogPost({ params }: Args) {
   const { slug = '' } = await params

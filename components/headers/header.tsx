@@ -6,6 +6,13 @@ import { Menu, X, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/wrappers/theme-toggle"
 import { BorderWrapper } from "@/components/wrappers/border-wrapper"
+import { Bungee } from "next/font/google";
+
+const bungee = Bungee({
+  variable: "--font-bungee",
+  subsets: ["latin"],
+  weight: "400",
+});
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,7 +25,7 @@ export function Header() {
     <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <BorderWrapper>
         <div className="container mx-auto border-r border-l flex h-16 items-center justify-between px-8">
-            <Link href="/" className="font-bold text-xl">
+            <Link href="/" className={`font-extrabold text-xl ${bungee.className}`}>
               Piotr Szaran
             </Link>
 

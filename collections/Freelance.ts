@@ -27,5 +27,13 @@ export const Freelance: CollectionConfig = {
       type: 'textarea',
       required: true,
     },
+    {
+      name: 'liveUrl',
+      type: 'text',
+    },
+    {
+      name: 'slug',
+      type: 'text',
+    },
   ],
 }

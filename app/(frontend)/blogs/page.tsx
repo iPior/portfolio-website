@@ -3,11 +3,31 @@ import { BorderWrapper } from "@/components/wrappers/border-wrapper"
 import { SectionHeader } from "@/components/headers/section-header"
 import BlogCard from "@/components/cards/blog-card"
 import { FadeRight } from "@/components/animations/fade-right"
+import type { Metadata } from "next";
 
 import type { Payload } from "payload"
 import { getPayload } from 'payload'
 import config from '@payload-config'
 import { Blog } from "@/payload-types"
+
+export const metadata: Metadata = {
+  title: "Blog Posts | Piotr Szaran - Web Developer & DJ",
+  description: "Read my latest blog posts about web development, technology, DJing, and personal insights. Stay updated with tutorials, thoughts, and experiences from a Toronto-based developer and DJ.",
+  keywords: ["blog", "web development", "programming", "technology", "DJ", "tutorials", "insights", "Piotr Szaran"],
+  openGraph: {
+    title: "Blog Posts | Piotr Szaran",
+    description: "Read my latest blog posts about web development, technology, DJing, and personal insights.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Blog Posts | Piotr Szaran",
+    description: "Read my latest blog posts about web development, technology, DJing, and personal insights.",
+  },
+  alternates: {
+    canonical: "https://www.piotrszaran.com/blogs",
+  },
+};
 
 export default async function BlogPage() {
   const payload = await getPayload({ config })

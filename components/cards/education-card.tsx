@@ -8,11 +8,11 @@ interface EducationCardProps {
 
 export default function EducationCard({ className }: EducationCardProps) {
   const interests = [
-    "WebSocket requests",
     "Optimizing web application performance",
     "Intermediate Next.js and TypeScript concepts",
-    "MongoDB, Prisma and Supabase",
     "Tanstack Start, React Native and Electron",
+    "Optimistic UI/UX",
+    "Local First Sync Engines",
   ];
 
   return (

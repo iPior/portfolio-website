@@ -284,6 +284,8 @@ export interface Freelance {
   title: string;
   description: string;
   technologies: string;
+  liveUrl?: string | null;
+  slug?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -518,6 +520,8 @@ export interface FreelanceSelect<T extends boolean = true> {
   title?: T;
   description?: T;
   technologies?: T;
+  liveUrl?: T;
+  slug?: T;
   updatedAt?: T;
   createdAt?: T;
 }
