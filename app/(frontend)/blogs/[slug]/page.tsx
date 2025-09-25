@@ -43,9 +43,6 @@ export async function generateMetadata({ params }: Args): Promise<Metadata> {
   }
 
   const publishedDate = new Date(post.date).toISOString()
-  const imageUrl = post.image && typeof post.image === 'object' && 'url' in post.image 
-    ? post.image.url 
-    : 'https://www.piotrszaran.com/images/og-image.png'
 
   return {
     title: `${post.title} | Piotr Szaran - Blog`,

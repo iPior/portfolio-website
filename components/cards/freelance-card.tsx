@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Media } from "@/payload-types";
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github, Newspaper } from "lucide-react"
+import { ExternalLink, Newspaper } from "lucide-react"
 
 
 
