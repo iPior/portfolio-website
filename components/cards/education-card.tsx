@@ -12,7 +12,7 @@ export default function EducationCard({ className }: EducationCardProps) {
     "Intermediate Next.js and TypeScript concepts",
     "Tanstack Start, React Native and Electron",
     "Optimistic UI/UX",
-    "Local First Sync Engines",
+    "Local First & Sync Engines",
   ];
 
   return (

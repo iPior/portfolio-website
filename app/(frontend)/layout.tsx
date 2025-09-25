@@ -18,10 +18,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hi, I'm Piotr Szaran",
+  title: "Piotr Szaran | Web Developer",
   description: "A Web Developer based in Toronto.",
   openGraph: {
-    title: "Check out my portfolio!",
+    title: "Hi, I'm Piotr Szaran | Check out my portfolio!",
     description: "A Web Developer based in Toronto.",
     images: "https://www.piotrszaran.com/images/og-image.png",
   },
