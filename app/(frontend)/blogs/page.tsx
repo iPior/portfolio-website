@@ -10,6 +10,8 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { Blog } from "@/payload-types"
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: "Blog Posts | Piotr Szaran - Web Developer & DJ",
   description: "Read my latest blog posts about web development, technology, DJing, and personal insights. Stay updated with tutorials, thoughts, and experiences from a Toronto-based developer and DJ.",

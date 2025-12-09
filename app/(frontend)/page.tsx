@@ -4,6 +4,7 @@ import { FreelanceWork } from "@/components/sections/freelance-work"
 import { About } from "@/components/sections/about"
 import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 
+export const dynamic = 'force-dynamic'
 
 export default async function HomePage() {
 

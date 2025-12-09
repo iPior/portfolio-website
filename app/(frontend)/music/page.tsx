@@ -4,6 +4,8 @@ import { DjContact } from "@/components/sections/contact";
 import { PatternWrapper } from "@/components/wrappers/pattern-wrapper"
 import type { Metadata } from "next";
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: "DJ Pior - Music & Mixes | Piotr Szaran",
   description: "Listen to DJ Pior's latest mixes featuring drum & bass, house music, and electronic beats. High-energy sets and freestyle mixes from Toronto-based DJ.",
