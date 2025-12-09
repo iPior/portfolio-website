@@ -16,7 +16,7 @@ export const FadeDown = ({ children }: FadeProps) => {
         if (isInView) { 
             mainControls.start("show");
         }
-    }, [isInView]);
+    }, [isInView, mainControls]);
 
   return (
     <div ref={ref} >
