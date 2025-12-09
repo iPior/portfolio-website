@@ -77,11 +77,9 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI || '',
-      max: 100, // Maximum number of clients in the pool (increased for serverless environments)
-      min: 2, // Minimum number of clients to keep in the pool
-      idleTimeoutMillis: 10000, // Close idle clients after 10 seconds (reduced for serverless)
-      connectionTimeoutMillis: 5000, // Return an error after 5 seconds if connection could not be established
-      allowExitOnIdle: true, // Allow the process to exit when idle (important for serverless)
+      idleTimeoutMillis: 10000,
+      connectionTimeoutMillis: 5000,
+      allowExitOnIdle: true,
     },
   }),
   sharp,
