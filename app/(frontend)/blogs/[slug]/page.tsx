@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 import RichText from '@/components/sanity/rich-text'
 import { getPayload } from 'payload'
 import configPromise from '@payload-config'
+import type { DefaultTypedEditorState } from '@payloadcms/richtext-lexical'
 
 type Args = {
   params: Promise<{
@@ -119,7 +120,7 @@ export default async function BlogPost({ params }: Args) {
                           priority 
                         />
                     </div>
-                    <RichText data={post.content} enableGutter={false} />
+                    <RichText data={post.content as DefaultTypedEditorState} enableGutter={false} />
                     {/* Return to Blogs Link */}
                     <div className="">
                       <Link
