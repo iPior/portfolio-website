@@ -17,8 +17,17 @@ type Args = {
   }>
 }
 
+// Reuse Payload instance to avoid creating multiple connections
+let payloadInstance: Awaited<ReturnType<typeof getPayload>> | null = null
+const getPayloadInstance = async () => {
+  if (!payloadInstance) {
+    payloadInstance = await getPayload({ config: configPromise })
+  }
+  return payloadInstance
+}
+
 const queryPostBySlug = async ({ slug }: { slug: string }) => {
-  const payload = await getPayload({ config: configPromise })
+  const payload = await getPayloadInstance()
   const result = await payload.find({
     collection: 'blog',
     limit: 1,
@@ -75,6 +84,7 @@ export async function generateMetadata({ params }: Args): Promise<Metadata> {
 
 export default async function BlogPost({ params }: Args) {
   const { slug = '' } = await params
+  // Reuse the same query result - Payload instance is already cached
   const post = await queryPostBySlug({ slug })
 
   if (!post) {
