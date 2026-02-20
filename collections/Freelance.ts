@@ -1,9 +1,14 @@
 import type { CollectionConfig } from 'payload'
+import { triggerRevalidate } from '@/lib/revalidate'
 
 export const Freelance: CollectionConfig = {
   slug: 'freelance',
   access: {
     read: () => true,
+  },
+  hooks: {
+    afterChange: [() => triggerRevalidate()],
+    afterDelete: [() => triggerRevalidate()],
   },
   fields: [
     {

@@ -1,9 +1,24 @@
 import type { CollectionConfig } from 'payload'
+import { triggerRevalidate } from '@/lib/revalidate'
 
 export const Blog: CollectionConfig = {
   slug: 'blog',
   access: {
     read: () => true,
+  },
+  hooks: {
+    afterChange: [
+      async ({ doc }) => {
+        const slug = doc.slug as string
+        await triggerRevalidate(['/', '/blogs', ...(slug ? [`/blogs/${slug}`] : [])])
+      },
+    ],
+    afterDelete: [
+      async ({ doc }) => {
+        const slug = doc?.slug as string | undefined
+        await triggerRevalidate(['/', '/blogs', ...(slug ? [`/blogs/${slug}`] : [])])
+      },
+    ],
   },
   fields: [
     {
